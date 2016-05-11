@@ -1,0 +1,131 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset0 Consolas;\f1\fnil\fcharset0 Consolas-Bold;}
+{\colortbl;\red255\green255\blue255;\red255\green238\blue149;\red21\green102\blue47;\red97\green0\blue1;
+\red0\green0\blue152;\red86\green219\blue233;\red88\green229\blue64;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs36 \cf2 \cb3 \CocoaLigature0 Last login: Wed May 11 00:38:09 on ttys010\
+Loading ~/.bash_profile a shell script that runs in every new terminal you open\
+Logged in as margaretdorsey at revmaggetonimac\
+\
+\cf4 html\cf2  (master) :> ls\
+
+\f1\b \cf5 forms
+\f0\b0 \cf2       
+\f1\b \cf5 moon_bootz
+\f0\b0 \cf2  
+\f1\b \cf5 planning
+\f0\b0 \cf2    
+\f1\b \cf5 web_basics
+\f0\b0 \cf2 \
+\
+\cf4 html\cf2  (master) :> cd web_basics\
+\
+\cf4 web_basics\cf2  (master) :> touch index.html\
+\
+\cf4 web_basics\cf2  (master) :> ls\
+index.html\
+\
+\cf4 web_basics\cf2  (master) :> subl index.html\
+\
+\cf4 web_basics\cf2  (master) :> open index.html\
+\
+\cf4 web_basics\cf2  (master) :> git co -b greetings-branch\
+Switched to a new branch 'greetings-branch'\
+\
+\cf4 web_basics\cf2  (master) :> git add index.html\
+\
+\cf4 web_basics\cf2  (master) :> git commit -m "Add hello world for h1"\
+[greetings-branch 940836a] Add hello world for h1\
+ 1 file changed, 9 insertions(+)\
+ create mode 100644 html/web_basics/index.html\
+\
+\cf4 web_basics\cf2  (master) :> git push origin greetings-branch\
+Username for 'https://github.com': maggie-emm\
+Password for 'https://maggie-emm@github.com': \
+Counting objects: 5, done.\
+Delta compression using up to 2 threads.\
+Compressing objects: 100% (4/4), done.\
+Writing objects: 100% (5/5), 459 bytes | 0 bytes/s, done.\
+Total 5 (delta 2), reused 0 (delta 0)\
+To https://github.com/maggie-emm/phase-0-tracks.git\
+ * [new branch]      greetings-branch -> greetings-branch\
+\
+\cf4 web_basics\cf2  (master) :> git status\
+On branch greetings-branch\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf6 ../../version-control/Terminal History.rtf\cf2 \
+\
+nothing added to commit but untracked files present (use "git add" to track)\
+\
+\cf4 web_basics\cf2  (master) :> open index.html\
+\
+\cf4 web_basics\cf2  (master) :> git branch\
+  cnn-branch\
+* \cf7 greetings-branch\cf2 \
+  master\
+  vc_feature-branch\
+\
+\cf4 web_basics\cf2  (master) :> git co -b web-content-branch\
+M	html/web_basics/index.html\
+Switched to a new branch 'web-content-branch'\
+\
+\cf4 web_basics\cf2  (master) :> git add web-content-branch\
+fatal: pathspec 'web-content-branch' did not match any files\
+\
+\cf4 web_basics\cf2  (master) :> git commit -m "Added content to web page"\
+On branch web-content-branch\
+Changes not staged for commit:\
+	\cf7 modified:   index.html\cf2 \
+\
+Untracked files:\
+	\cf6 ../../version-control/Terminal History.rtf\cf2 \
+\
+no changes added to commit\
+\
+\cf4 web_basics\cf2  (master) :> ls\
+index.html\
+\
+\cf4 web_basics\cf2  (master) :> git status\
+On branch web-content-branch\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf7 modified:   index.html\cf2 \
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf6 ../../version-control/Terminal History.rtf\cf2 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+\
+\cf4 web_basics\cf2  (master) :> git branch\
+  cnn-branch\
+  greetings-branch\
+  master\
+  vc_feature-branch\
+* \cf7 web-content-branch\cf2 \
+\
+\cf4 web_basics\cf2  (master) :> git add index.html\
+\
+\cf4 web_basics\cf2  (master) :> git commit -m "Add content to web page"\
+[web-content-branch 20ed4fd] Add content to web page\
+ 1 file changed, 16 insertions(+), 2 deletions(-)\
+\
+\cf4 web_basics\cf2  (master) :> git push origin web-content-branch\
+Username for 'https://github.com': maggie-emm\
+Password for 'https://maggie-emm@github.com': \
+Counting objects: 5, done.\
+Delta compression using up to 2 threads.\
+Compressing objects: 100% (4/4), done.\
+Writing objects: 100% (5/5), 767 bytes | 0 bytes/s, done.\
+Total 5 (delta 2), reused 0 (delta 0)\
+To https://github.com/maggie-emm/phase-0-tracks.git\
+ * [new branch]      web-content-branch -> web-content-branch\
+\
+\cf4 web_basics\cf2  (master) :> }
