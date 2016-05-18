@@ -1,0 +1,29 @@
+Research the following questions, and add code examples to practice.css where prompted.
+
+1. What does the "Cascading" part of Cascading Style Sheets mean? 
+Means the styles can fall from one style sheet to another.
+
+When there is a conflict between two CSS rules that select the same element, how does your browser decide which rule to use?
+Each element is assigned a value and given a weight, then the browser determines which has the most weight and selects that element.
+
+Find a cheat sheet or quick guide on CSS selectors, or refer to a cheat sheet you've already bookmarked. 
+What is a pseudoselector? 
+Takes specific parts of an element and can add style to that part of the elements.
+
+Write a CSS rule that uses a pseudoselector.
+p::first-line {
+	font-style: bold;
+	font-size: .8em;
+}
+
+How can you use CSS to select the child element of another element (for instance, a section inside another section, or an li inside a ul but not inside an ol)?
+You can create a class for list and unordered list and edit it in css.
+
+Add an example of such a rule in your CSS.
+/* Add a class to the ul element in the html to make the li in that ul a smaller font. */
+/* Then use your class as a selector in your css to make the text .8em. */
+<ul class="ul_smaller_font" 
+{
+  font-size: .8em;
+  list-style-type: round;
+}
