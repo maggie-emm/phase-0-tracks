@@ -1,0 +1,41 @@
+body {
+	background-color: #9966cc;
+	background-image: url(lotus-flower-from-bahman-farzad1.jpg);
+	background-repeat: no-repeat;
+}
+#external-links ul {
+	background-color: #9966cc;
+}
+h1 {
+	border: 0.2em solid red;
+	padding-top: 50px;
+	text-align: center;
+	padding-bottom: 50px;
+}
+h3 {
+	margin-left: 10%;
+	color: white;
+	text-shadow: 3px 3px 1px #000;
+}
+footer {
+	text-align: center
+}
+p {
+	font-family: arial;
+	font-size: 20px;
+}
+.reference {
+	font-family: helvetica;
+	font-size: 15px;
+	text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: .8em;
+  }
+}
+@media screen and (max-width: 350px) {
+.reference {
+    width: 100%;
+  }
+}
