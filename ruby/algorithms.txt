@@ -1,4 +1,4 @@
-#write algorithm for using an elevator
+#Rel0: write algorithm for robot to use an elevator
 #assumptions: 
  1) robby_the_robot (R2) knows how to walk and can understand english language
  2) can identify an elevator and knows that they carry people and supplies up and down multiple storied buildings so they don't have to use the stairs
