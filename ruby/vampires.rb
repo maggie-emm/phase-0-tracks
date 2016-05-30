@@ -20,19 +20,34 @@ year_born = gets.chomp
 #order garlic bread for you from the cafeteria?
 valid_input = false
 until valid_input
-puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
-garlic_preference = gets.chomp
-  if garlic_preference == "y"
-  	valid_input = true
-  	puts "Wonderful, I'm sure you will enjoy it."
-  elsif garlic_preference == "n"
-  	valid_input = true
-  	puts "Hmmm. Very interesting. That's good information to know"
-  else
-  	puts "Please use the y for yes, I want garlic bread or n for no, I don't want garlic bread."
-  end
-end
-  
+	puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
+	garlic_preference = gets.chomp
+  		if garlic_preference == "y"
+  		   valid_input = true
+  		   	 puts "Wonderful, I'm sure you will enjoy it."
+  		elsif garlic_preference == "n"
+  		   valid_input = true
+  		     puts "Hmmm. Very interesting. That's good information to know"
+  		else
+  			puts "Please use the y for yes, I want garlic bread or n for no, I don't want garlic bread."
+  		end
+	end
+
+#health insurance?
+valid_input = false
+until valid_input
+	puts "Would you like to be enrolled in the company's health insurance?"
+	health_insurance_preference = gets.chomp
+		if health_insurance_preference == "y"
+			valid_input = true
+			  puts "Great! We are happy to hear that!"
+		elsif health_insurance_preference == "n"
+			valid_input = true
+			  puts "Very well. I will be sure and document that."
+		else
+			puts "Please use the y for yes, I want health insurance or n for no, I don't want health insurance."
+		end	
+  end  
 
   
 
