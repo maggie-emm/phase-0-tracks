@@ -16,13 +16,33 @@ age = gets.chomp
 puts "What year were you born?"
 year_born = gets.chomp
 
+#see if age jives with year born
+#get current year
+
+#gives false compute message to all input
+#DEBUG THIS:
+def age_computes
+while age_computes == false	
+	puts "Hold a moment while we verify your age."
+	current_year = Time.new.year
+	if year_born.to_i + age.to_i == current_year
+		age_computes = true
+		puts "Congratulations. Your age is accurate."
+	else year_born.to_i + age.to_i != current_year
+		age_computes = false
+		puts "Your age seems to be inaccruate."
+		puts "please enter your current age."
+	end
+end
+end
+
 #order garlic bread for you from the cafeteria?
 valid_input = false
 until valid_input
 	puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
 	garlic_preference = gets.chomp
   		if garlic_preference == "y"
-  			valid_input = true
+  		   valid_input = true
   		elsif garlic_preference == "n"
   		   valid_input = true
   		else
@@ -44,7 +64,6 @@ until valid_input
 		end	
   end  
 
-  
 
 
 
