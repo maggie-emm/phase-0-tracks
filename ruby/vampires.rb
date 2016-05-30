@@ -8,7 +8,6 @@
 #Name:
 puts "What is your name?"
 name = gets.chomp
-puts "Hi #{name}. Welcome aboard!"
 
 #age & year_born
 puts "How old are you?"
@@ -23,11 +22,9 @@ until valid_input
 	puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
 	garlic_preference = gets.chomp
   		if garlic_preference == "y"
-  		   valid_input = true
-  		   	 puts "Wonderful, I'm sure you will enjoy it."
+  			valid_input = true
   		elsif garlic_preference == "n"
   		   valid_input = true
-  		     puts "Hmmm. Very interesting. That's good information to know"
   		else
   			puts "Please use the y for yes, I want garlic bread or n for no, I don't want garlic bread."
   		end
@@ -40,10 +37,8 @@ until valid_input
 	health_insurance_preference = gets.chomp
 		if health_insurance_preference == "y"
 			valid_input = true
-			  puts "Great! We are happy to hear that!"
 		elsif health_insurance_preference == "n"
 			valid_input = true
-			  puts "Very well. I will be sure and document that."
 		else
 			puts "Please use the y for yes, I want health insurance or n for no, I don't want health insurance."
 		end	
