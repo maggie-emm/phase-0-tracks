@@ -19,68 +19,40 @@ year_born = gets.chomp
 #see if age jives with year born
 #get current year
 
-#gives false compute message to all input
-#DEBUG THIS:
-def age_computes
-while age_computes == false	
-	puts "Hold a moment while we verify your age."
-	current_year = Time.new.year
-	if year_born.to_i + age.to_i == current_year
-		age_computes = true
-		puts "Congratulations. Your age is accurate."
-	else year_born.to_i + age.to_i != current_year
-		age_computes = false
-		puts "Your age seems to be inaccruate."
-		puts "please enter your current age."
+#puts "Hold a moment while we verify your age."
+current_year = Time.new.year
+	if current_year.to_i - age.to_i == year_born.to_i
+		age = true 
+	else current_year.to_i - age.to_i != year_born
+		age = false
 	end
-end
-end
 
 #order garlic bread for you from the cafeteria?
-valid_input = false
-until valid_input
-	puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
+puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
 	garlic_preference = gets.chomp
   		if garlic_preference == "y"
-  		   valid_input = true
-  		elsif garlic_preference == "n"
-  		   valid_input = true
-  		else
-  			puts "Please use the y for yes, I want garlic bread or n for no, I don't want garlic bread."
+  		   garlic_preference = true
+  		else garlic_preference = false
   		end
-	end
 
 #health insurance?
-valid_input = false
-until valid_input
-	puts "Would you like to be enrolled in the company's health insurance?"
+puts "Would you like to be enrolled in the company's health insurance?"
 	health_insurance_preference = gets.chomp
 		if health_insurance_preference == "y"
-			valid_input = true
-		elsif health_insurance_preference == "n"
-			valid_input = true
-		else
-			puts "Please use the y for yes, I want health insurance or n for no, I don't want health insurance."
+			health_insurance_preference = true
+		else health_insurance_preference = false
 		end	
-  end  
 
+age_computes = true
+garlic_preference = true
+health_insurance_preference = true
 
+(age_computes && garlic_preference && health_insurance_preference)
+puts "Probably not a vampire"
 
+age_computes = false
+garlic_preference = false
+health_insurance_preference = false
 
-
-
-
-
-# Check if age computes
-#current_year = Time.new.year # Create instance of current year
-#if year_of_birth.to_i + age.to_i == current_year
-#  age_computes = true  
-#  puts "age_computes is true"
-#elsif year_of_birth.to_i + age.to_i == current_year - 1
-#  age_computes = true # birthday is later this year
-#  puts "age_computes is true enough"
-#else
-#  age_computes = false
-#  puts "age_computes is false"
-#end
-
+!(age_computes && garlic_preference && health_insurance_preference)
+puts "Probably a vampire"
