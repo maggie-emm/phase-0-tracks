@@ -1,0 +1,14 @@
+4.5 Debugging_Rel1
+
+Consider the workflow advice above, and compare it to your coding process so far. How can your workflow improve? What mistakes have caused you the most trouble in the past? Write a paragraph or two about flaws in your workflow and how you plan to break any bad habits. Submit it in the provided text box.
+	
+Considering the workflow advice in this challenge and comparing it to my current practices was quite an eye opener.
+
+How can my workflow improve? 
+1) DO BETTER WITH GITHUB: remember to pull master before I even read the challenge, then I know my master is clean. 
+
+2) I can commit much more often. I never thought of committing each of my bugs. I like that. I can see that once I take an initual stab at the program, I can commit then as I work through a section commit as I go until I get a piece that works. Once it works that could become my feature branch, then when the next piece doesn't work, I can create a "debug branch" so my working code is not corrupted.
+
+3) Naming variables, indenting and testing code often: Right now, I think I'm fairly decent re: naming them so they are clear & represent what I'm working on, and there's more conscious awareness I can put to that. I really like using the indents; it took me 1 hour to de-bug 4.4, until I knew the code was right and I "looked" at the keywords for the first time and saw "elseif" instead of "elsif". The indent made it pop out at me when I knew the code was good. Testing code often: I am happy with this current habit. I test it freq in terminal or REPL.
+
+My primary commitment to myself now that I am no longer working FT, is to spend more time on practicing code; writing, reading and running.
