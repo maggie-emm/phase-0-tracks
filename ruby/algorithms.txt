@@ -1,0 +1,70 @@
+#Rel0: write algorithm for robot to use an elevator
+#assumptions: 
+ 1) robby_the_robot (R2) knows how to walk and can understand english language
+ 2) can identify an elevator and knows that they carry people and supplies up and down multiple storied buildings so they don't have to use the stairs
+ 3) must be programmed how to use an elevator
+ 4) understands commands for using arms and fingers
+ 5) understands commands for identifying symbols; i.e., ^ = up, / = down, < = left, > = right, etc.
+ 6) understands shapes: round, square, triangle, etc.
+ 7) understands directiorns: front, back, rear, right, left, middle, etc.
+
+-facing the elevator, observe a panel to either the right or left of the elevator
+-observe a round button on the panel with a ^ symbol or the words up
+-observa another round button below the ^ symbol with the symbol / or the words down
+-depending on whether you are instructed to go up or down, you will activate the elevator by pressing the appropriate button
+-you will be going up so raise right hand to an approximately 90 degree angle with pointer finger extended
+-press the ^ arrow, observe the light will be activated which means the elevator has been programmed to come to your floor and wait for doors to open
+-lower your arm to your side (default position)
+-when elevator doors open, stand to the side of the doors to allow anyone riding the elevator who wants to come out to do so
+-when all people who wish to exit the elevator have done so, walk into the elevator to about the middle of the space
+-you will be facing the rear wall, turn 180 degrees so you are now facing the front where most doors are located (we will address elevators with doors in both front and back in another lesson)
+-look at the walls to either side of the doors
+-observe a panel that has round buttons with numbers associated with them
+-you will be going to the 3rd floor
+-raise your left hand approximately 90 degrees and press the button with the number 3 on it
+-lower your arm to default position
+-observe the light is activated which means the elevator is programmed to stop on that floor
+-use this process anytime you want to go to any floor identified on the panel
+-if your floor is not listed, CALL HOME R2 because you probably have received the wrong input
+-when the elevator stops on the 3rd floor, the doors will open
+-when the doors are completely open, walk out to hallway
+-await further instructions
+
+
+#Rel1: Real-life algorithm:
+Daily morning lemon-tumeric-honey-cinnamon drink
+-turn hot water kettle on by depressing the lever under the handle
+-open left-side cupboard door
+-on bottom shelf toward middle is small clyder shaped silver container with a plastic small strainer on top
+-next to it is a brown mug and a jar of honey
+-pick all 3 items up from the shelf and place on counter top
+-turn 90 degrees to right and pick out a lemmon from the pile on the window shelf
+-turn back to the counter and place the lemon on the counter
+-take a knife out of the knife holder in front of you on the left side of the counter
+-rotate the lemon so that the stem is facing right and the bottom is facing left
+-using the knife, cut the lemon in half between the stem and the bottom
+-pick up 1 half and hold it in right hand so that the outside of the lemon is next to your skin and the fruit side is up
+-place the fruit side on the strainer
+-rotate the lemon from right to left side while pressing down so that juice drips down into container
+-repeat with 2nd half of lemon
+-remove strainer from top, rinse out and place in large dish strainer
+-open the right hand side of the cupboard
+-on the bottom shelf on the right hand side are 2 small containers holding 2 different spices, one is tumeric and one is cinnamon
+-reach into cupboard grasping the small containers and put them on the counter top laying them down side by side
+-on your countertop is a thermos with cooled water
+-remove top of thermos and pour water into the mug until it reaches 3/4 of distance to top
+-using the hot water from the kettle, pour just enough water to raise the temperature of the water in the mug from room temperature to warm
+-pour the lemon juice that was strained, into the mug
+-open drawer on left of counter and remove a blue plastic 1/4 teaspoon(tsp) measurer and a metal tablespoon and put on countertop
+-close drawer
+-open the lid of the tumeric and using the 1/4 tsp measurer insert it into the tumeric container, dip the measurer into the spice and withdraw the spice
+-empty spice into mug with lemon juice
+-open jar of honey and using the 1/4 tsp measurer scoop 1/4 tsp of honey out and place in the much of water which now contains lemon, tumeric & honey
+-using the 1/4 tsp measurer stir the mixture until well mixed
+-open the lid to the cinnamon and using the metal tablespoon place small amount of cinnamon on the spoon and stir into mug
+-replace the lid on the cinnamon
+-drink lemon juice
+-rinse all utensils and place in large dish strainer
+-replace all items back into the cupboard
+-start making coffee!!!
+END
