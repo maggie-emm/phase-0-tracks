@@ -4,17 +4,24 @@
 #Do you want garlic bread from the cafeteria?
 #Are you interested in health insurance?
 
-#Def method for asking these questions:
+#Rel 3: Multiple Employees
+puts "How many employees will we be welcoming today?"
+number_employees = gets.chomp.to_i
+index = 0
+while index < number_employees
+
+#Rel 1: Interview the Vampire
+#Ask following questions:
 #Name:
 puts "What is your name?"
-name = gets.chomp
+name = gets.chomp.to_s
 
 #age & year_born
 puts "How old are you?"
-age = gets.chomp
+age = gets.chomp.to_i
 
 puts "What year were you born?"
-year_born = gets.chomp
+year_born = gets.chomp.to_i
 
 #see if age jives with year born
 #get current year
@@ -22,37 +29,68 @@ year_born = gets.chomp
 #puts "Hold a moment while we verify your age."
 current_year = Time.new.year
 	if current_year.to_i - age.to_i == year_born.to_i
-		age = true 
+		age = true
 	else current_year.to_i - age.to_i != year_born
 		age = false
 	end
+#WORKS	
 
 #order garlic bread for you from the cafeteria?
 puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
-	garlic_preference = gets.chomp
-  		if garlic_preference == "y"
-  		   garlic_preference = true
-  		else garlic_preference = false
-  		end
+garlic_preference = gets.chomp
+#WORKS
 
 #health insurance?
-puts "Would you like to be enrolled in the company's health insurance?"
-	health_insurance_preference = gets.chomp
-		if health_insurance_preference == "y"
-			health_insurance_preference = true
-		else health_insurance_preference = false
-		end	
+puts "Would you like to be enrolled in the company's health insurance? (y/n)"
+health_insurance_preference = gets.chomp
+#WORKS
 
-age_computes = true
-garlic_preference = true
-health_insurance_preference = true
+#Rel 4: Allergies
+allergies = ""
+	until allergies == "done" || allergies == "sunshine"
+		puts "Please list any allergies you may have. Type 'done' when you are finished."
+		allergies = gets.chomp
+	end	
+	if allergies == "sunshine"
+		puts "Probably a vampire."
+	end
+#Works
 
-(age_computes && garlic_preference && health_insurance_preference)
-puts "Probably not a vampire"
+#Rel 2: Put conditions in place
+#Condition 4: Name = Drake Cula or Tu Fang = def vamp
+	if name == "Drake Cula" || name == "Tu Fang"
+	puts "Definitely a vampire"
+	
 
-age_computes = false
-garlic_preference = false
-health_insurance_preference = false
 
-!(age_computes && garlic_preference && health_insurance_preference)
-puts "Probably a vampire"
+#Condition 1 variables: all true/y = prob not vampire
+	elsif (age == true) && (garlic_preference == "y" || health_insurance_preference = "y")
+	puts "Probably not a vampire"
+	
+#YEAH!! WORKS	
+
+#Condition 2 variables: all false = prob vampire
+	elsif (age == false) && (garlic_preference == "n" || health_insurance_preference = "n")
+	puts "Probably a vampire"
+	
+#YEAH!! WORKS
+
+#Condition 3 variables: all false = prob vampire
+	elsif (age == false) && (garlic_preference == "n") && (health_insurance_preference = "n")
+	puts "Almost certainly a vampire"
+	
+#BUG: stalls after year born. requires another CR to go on
+#BUG: corrected on line 26 > change from gets.chomp to true
+#Condition 5: inconclusive
+	else
+		puts "Results inconclusive"
+	end
+
+index += 1
+
+end	
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
+#Added Rel5 Friends msg;
+#DEBUG Getting 2 different results after added Rel4 some conflict
