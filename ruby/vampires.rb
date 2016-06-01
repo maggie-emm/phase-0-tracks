@@ -4,7 +4,8 @@
 #Do you want garlic bread from the cafeteria?
 #Are you interested in health insurance?
 
-#Def method for asking these questions:
+#Rel 1: Interview the Vampire
+#Ask following questions:
 #Name:
 puts "What is your name?"
 name = gets.chomp
@@ -26,6 +27,7 @@ current_year = Time.new.year
 	else current_year.to_i - age.to_i != year_born
 		age = false
 	end
+#WORKS	
 
 #order garlic bread for you from the cafeteria?
 puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
@@ -34,6 +36,7 @@ puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/
   		   garlic_preference = true
   		else garlic_preference = false
   		end
+#WORKS
 
 #health insurance?
 puts "Would you like to be enrolled in the company's health insurance?"
@@ -42,17 +45,31 @@ puts "Would you like to be enrolled in the company's health insurance?"
 			health_insurance_preference = true
 		else health_insurance_preference = false
 		end	
+#WORKS		
 
+#Condition 1 variables
 age_computes = true
 garlic_preference = true
 health_insurance_preference = true
 
-(age_computes && garlic_preference && health_insurance_preference)
+(age_computes && garlic_preference || health_insurance_preference)
 puts "Probably not a vampire"
 
+#condition 2 variables
 age_computes = false
 garlic_preference = false
 health_insurance_preference = false
 
-!(age_computes && garlic_preference && health_insurance_preference)
+!(age_computes && garlic_preference || health_insurance_preference)
 puts "Probably a vampire"
+
+#condition 3 variables
+age_computes = false
+garlic_preference = false
+health_insurance_preference = false
+
+(age_computes && garlic_preference  &&  health_insurance_preference)
+puts "Almost certainly a vampire."
+#NOT WORKING: PUTS ALL 3 MESSAGES
+
+
