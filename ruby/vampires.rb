@@ -43,7 +43,18 @@ garlic_preference = gets.chomp
 #health insurance?
 puts "Would you like to be enrolled in the company's health insurance? (y/n)"
 health_insurance_preference = gets.chomp
-#WORKS		
+#WORKS
+
+#Rel 4: Allergies
+allergies = ""
+	until allergies == "done" || allergies == "sunshine"
+		puts "Please list any allergies you may have. Type 'done' when you are finished."
+		allergies = gets.chomp
+	end	
+	if allergies == "sunshine"
+		puts "Probably a vampire."
+	end
+#Works
 
 #Rel 2: Put conditions in place
 #Condition 4: Name = Drake Cula or Tu Fang = def vamp
@@ -78,4 +89,4 @@ health_insurance_preference = gets.chomp
 index += 1
 
 end	
-#Added Rel3 and debugged line 44 to add y/n & 46 to change false to no
+#Added Rel4 Allergies: Works but get 2 different results some conflict
