@@ -89,4 +89,8 @@ allergies = ""
 index += 1
 
 end	
-#Added Rel4 Allergies: Works but get 2 different results some conflict
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
+#Added Rel5 Friends msg;
+#DEBUG Getting 2 different results after added Rel4 some conflict
