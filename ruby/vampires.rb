@@ -32,61 +32,35 @@ current_year = Time.new.year
 #order garlic bread for you from the cafeteria?
 puts "Our cafeteria has the best garlic bread. Should we order some for you? (y/n)"
 garlic_preference = gets.chomp
-  	if garlic_preference == "y"
-  		   garlic_preference = true
-  	else garlic_preference = false
-  	end
 #WORKS
 
 #health insurance?
 puts "Would you like to be enrolled in the company's health insurance?"
 health_insurance_preference = gets.chomp
-	if health_insurance_preference == "y"
-			health_insurance_preference = true
-	else health_insurance_preference = false
-	end	
 #WORKS		
 
 #Rel 2: Put conditions in place
-#Condition 1 variables: all true = prob not vampire
-	if (age == true) && (garlic_preference == true || health_insurance_preference = true)
+#Condition 4: Name = Drake Cula or Tu Fang = def vamp
+	if name == "Drake Cula" || name == "Tu Fang"
+	puts "Definitely a vampire"
+	end
+
+
+#Condition 1 variables: all true/y = prob not vampire
+	if (age == true) && (garlic_preference == "y" || health_insurance_preference = "y")
 	puts "Probably not a vampire"
 	end
 #YEAH!! WORKS	
 
 #Condition 2 variables: all false = prob vampire
-	if (age == false) && (garlic_preference == false || health_insurance_preference = false)
+	if (age == false) && (garlic_preference == "n" || health_insurance_preference = false)
 	puts "Probably a vampire"
 	end
 #YEAH!! WORKS
 
 #Condition 3 variables: all false = prob vampire
-	if (age == false) && (garlic_preference == false) && (health_insurance_preference = false)
+	if (age == false) && (garlic_preference == "n") && (health_insurance_preference = "n")
 	puts "Almost certainly a vampire"
 	end
-
-
-
-
-
-
-
-
-#condition 2 variables
-age_computes = false
-garlic_preference = false
-health_insurance_preference = false
-
-!(age_computes && garlic_preference || health_insurance_preference)
-puts "Probably a vampire"
-
-#condition 3 variables
-age_computes = false
-garlic_preference = false
-health_insurance_preference = false
-
-(age_computes && garlic_preference  &&  health_insurance_preference)
-puts "Almost certainly a vampire."
-#NOT WORKING: PUTS ALL 3 MESSAGES
-
-
+#BUG: stalls after year born. requires another CR to go on
+#BUG: only started when added Condition 4
