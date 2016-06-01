@@ -23,7 +23,7 @@ year_born = gets.chomp.to_i
 #puts "Hold a moment while we verify your age."
 current_year = Time.new.year
 	if current_year.to_i - age.to_i == year_born.to_i
-		age = gets.chomp.to_i 
+		age = true
 	else current_year.to_i - age.to_i != year_born
 		age = false
 	end
@@ -43,24 +43,28 @@ health_insurance_preference = gets.chomp
 #Condition 4: Name = Drake Cula or Tu Fang = def vamp
 	if name == "Drake Cula" || name == "Tu Fang"
 	puts "Definitely a vampire"
-	end
+	
 
 
 #Condition 1 variables: all true/y = prob not vampire
-	if (age == true) && (garlic_preference == "y" || health_insurance_preference = "y")
+	elsif (age == true) && (garlic_preference == "y" || health_insurance_preference = "y")
 	puts "Probably not a vampire"
-	end
+	
 #YEAH!! WORKS	
 
 #Condition 2 variables: all false = prob vampire
-	if (age == false) && (garlic_preference == "n" || health_insurance_preference = false)
+	elsif (age == false) && (garlic_preference == "n" || health_insurance_preference = false)
 	puts "Probably a vampire"
-	end
+	
 #YEAH!! WORKS
 
 #Condition 3 variables: all false = prob vampire
-	if (age == false) && (garlic_preference == "n") && (health_insurance_preference = "n")
+	elsif (age == false) && (garlic_preference == "n") && (health_insurance_preference = "n")
 	puts "Almost certainly a vampire"
-	end
+	
 #BUG: stalls after year born. requires another CR to go on
-#BUG: only started when added Condition 4
+#BUG: corrected on line 26 > change from gets.chomp to true
+#Condition 5: inconclusive
+	else
+		puts "Results inconclusive"
+	end	
