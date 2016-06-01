@@ -43,7 +43,7 @@ puts "Would you like to be enrolled in the company's health insurance?"
 		else health_insurance_preference = false
 		end	
 
-		age_computes = true
+age_computes = true
 garlic_preference = true
 health_insurance_preference = true
 
