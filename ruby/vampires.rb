@@ -4,6 +4,12 @@
 #Do you want garlic bread from the cafeteria?
 #Are you interested in health insurance?
 
+#Rel 3: Multiple Employees
+puts "How many employees will we be welcoming today?"
+number_employees = gets.chomp.to_i
+index = 0
+while index < number_employees
+
 #Rel 1: Interview the Vampire
 #Ask following questions:
 #Name:
@@ -35,7 +41,7 @@ garlic_preference = gets.chomp
 #WORKS
 
 #health insurance?
-puts "Would you like to be enrolled in the company's health insurance?"
+puts "Would you like to be enrolled in the company's health insurance? (y/n)"
 health_insurance_preference = gets.chomp
 #WORKS		
 
@@ -53,7 +59,7 @@ health_insurance_preference = gets.chomp
 #YEAH!! WORKS	
 
 #Condition 2 variables: all false = prob vampire
-	elsif (age == false) && (garlic_preference == "n" || health_insurance_preference = false)
+	elsif (age == false) && (garlic_preference == "n" || health_insurance_preference = "n")
 	puts "Probably a vampire"
 	
 #YEAH!! WORKS
@@ -67,4 +73,9 @@ health_insurance_preference = gets.chomp
 #Condition 5: inconclusive
 	else
 		puts "Results inconclusive"
-	end	
+	end
+
+index += 1
+
+end	
+#Added Rel3 and debugged line 44 to add y/n & 46 to change false to no
