@@ -12,8 +12,9 @@ def
 
 end
 
-p "Client Name: "
-p "Address:"
+puts "Client Name:"
+	yield
+puts "Address:"
 
 
 	
@@ -38,7 +39,7 @@ p clients[:family][:age]
 p clients[:family][:married]
 p clients[:family][:children]
 p clients[:family][:pets]
-
+end
 
 
 
@@ -82,27 +83,27 @@ p clients[:family][:pets]
 #use symbols for keys unless a str is needed
 
 
-emmanuel = {:contacts => {:name =>"Emmanuel Kaunitz", :address => "blah st."}, :family => {:children => false}}
+#emmanuel = {:contacts => {:name =>"Emmanuel Kaunitz", :address => "blah st."}, :family => {:children => false}}
 
-p emmanuel[:contacts][:name]
-p emmanuel[:contacts][:address]
+#p emmanuel[:contacts][:name]
+#p emmanuel[:contacts][:address]
 
-p emmanuel[:family][:children]
+#p emmanuel[:family][:children]
 
-emmanuel = {:contacts => {name "Emmanuel Kaunitz", :address => "blah st."}, :family => {:children => false}}
+#emmanuel = {:contacts => {name "Emmanuel Kaunitz", :address => "blah st."}, :family => {:children => false}}
 
-p emmanuel[:contacts][:name] = "Maggie"
-p emmanuel[:contacts][:name]
+#p emmanuel[:contacts][:name] = "Maggie"
+#p emmanuel[:contacts][:name]
 
-p emmanuel[:contacts][:address]
+#p emmanuel[:contacts][:address]
 
-p emmanuel[:family][:children]
+#p emmanuel[:family][:children]
 
 
 
 
 #Prompt designer/user for all info
-P "Please enter all appropriate fields."
+#P "Please enter all appropriate fields."
 
 #Convert any user input to appropriate data type
 
