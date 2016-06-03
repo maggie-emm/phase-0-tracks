@@ -19,7 +19,13 @@ clients = {
 	}
 }
 
-
+p clients[:contacts][:name]
+p clients[:contacts][:address]
+p clients[:contacts][:eml]
+p clients[:family][:age]
+p clients[:family][:married]
+p clients[:family][:children]
+p clients[:family][:pets]
 
 
 
