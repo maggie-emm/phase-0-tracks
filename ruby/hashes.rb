@@ -3,8 +3,20 @@
 #include str, i && boolean types of data objects
 #MMVP >> Most Minimal Viable Product
      
-puts "Please enter your information in the field provided."
+puts "Greetings Designer. Please provide me with your name."
+	designer_name = gets.chomp
+puts "Welcome back, #{designer_name}. \n\rPlease enter your client's information in the field provided."
 
+#ask designer questions & allow response; store response & call & print @end
+def 
+
+end
+
+p "Client Name: "
+p "Address:"
+
+
+	
 clients = {
 	:contacts => {
 		:name => "Maggie Emm", 
