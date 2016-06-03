@@ -1,13 +1,55 @@
 #pseudocode & write program for interior design client form
 #identify all client info that will be needed
 #include str, i && boolean types of data objects
-#Types of Info:
-#Category	keys       
-#Contact :name_last, first	
+#MMVP >> Most Minimal Viable Product
+     
+puts "Please enter your information in the field provided."
+
+clients = {
+	:contacts => {
+		:name => "Maggie Emm", 
+		address:"555 5th St, Fiver, CA, 55555", 
+		eml:"5forever@5mail.com"
+	}, 
+	family:{
+		age:"50-59",
+		married:"true", 
+		children:"2", 
+		pets:"3"
+	}
+}
+
+
+
+
+
+
+#Couldn't get 3rd piece designs:{} to work. Dropped & left 
+#contacts & family only
+#clients = {
+#	:contacts => {
+#		:name => "Maggie Emm", 
+##		address:"555 5th St, Fiver, CA, 55555", 
+#		eml:"5forever@5mail.com"
+#		}, 
+#	family:{
+#		age:"50-59"
+#		married:"true", 
+#		children:"2", 
+#		pets:"3"
+#		}
+#	designs:{
+#		:art_deco => "false", 
+#		modern:"false", 
+#		country:"false", 
+#		mix_n_match:"true", 
+#		ikea:"true"
+#		}
+#}
 #        :tn	
-#        :address
-#        :city
-#        :state
+#       :city
+#          :address
+#       :state
 #        :zip
 #        :eml
 #Family  :single
@@ -22,7 +64,21 @@
 #use symbols for keys unless a str is needed
 
 
+emmanuel = {:contacts => {:name =>"Emmanuel Kaunitz", :address => "blah st."}, :family => {:children => false}}
 
+p emmanuel[:contacts][:name]
+p emmanuel[:contacts][:address]
+
+p emmanuel[:family][:children]
+
+emmanuel = {:contacts => {name "Emmanuel Kaunitz", :address => "blah st."}, :family => {:children => false}}
+
+p emmanuel[:contacts][:name] = "Maggie"
+p emmanuel[:contacts][:name]
+
+p emmanuel[:contacts][:address]
+
+p emmanuel[:family][:children]
 
 
 
