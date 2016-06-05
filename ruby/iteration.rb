@@ -1,3 +1,49 @@
+# REL #1
+#1: Declare & populate with relevant data an array & hash
+#Array Example:
+hobbies = ["biking", "hiking", "gardening"] #puts only 1 set []
+p hobbies
+
+#Hash Example:
+fun_stuff = {biking: "road_bike", hiking: "mt tam", gardening: "tomatoes"}
+p fun_stuff
+
+# #2: Interate thru array & hash using .each, then .map! on array only
+#Iterate thru my array using .each
+hobbies = ["biking", "hiking", "gardening"] 
+
+hobbies.each { |activity|
+	puts "My fav activity is #{activity}" }
+
+#Iterate thru my hash using .each
+fun_stuff = {
+	biking: "road_bike", 
+	hiking: "mt tam", 
+	gardening: "tomatoes"
+}
+
+fun_stuff.each { |activity, use|
+	puts "I enjoy #{activity} on #{use}." }
+
+#Iterate thru my array with .map! (Can't use .map! on hash)
+hobbies = ["biking", "hiking", "gardening"] 
+
+	puts "My original hobby array list is:"
+	p hobbies
+
+hobbies.map! { |activity|
+	puts activity
+	activity.next }
+
+puts "After .map! & .next used on hobby array the list changes to:"	
+p hobbies
+puts "Since using .next, only the last letter of each element in array is changed."
+
+#Rel # 2
+#1
+
+#################################################
+#THIS IS ALL PRACTICE & #
 #Programming using an array but iteration using method while not .each
 #	dogs_names = ["trigger", "pugs", "stella", "barney"]
 #	index = 0
@@ -86,20 +132,20 @@
 #feed_critters { puts "Eat your dinner if you want a treat" }
 #***********
 #Assign values to block in Yield line
-def feed_critters
-	puts "It's time for dinner, you 3 critters"
-	yield("Trigger", "Puggsy", "Missy") 
-end	
+#def feed_critters
+#	puts "It's time for dinner, you 3 critters"
+#	yield("Trigger", "Puggsy", "Missy") 
+#end	
 
-feed_critters { |name1, name2, name3| puts "Eat your dinner if you want a treat #{name1}, #{name2} and #{name3}" }
+#feed_critters { |name1, name2, name3| puts "Eat your dinner if you want a treat #{name1}, #{name2} and #{name3}" }
 #***********
 #Another example of assigning values to block in yield line
-def story_telling
-	puts "Let me tell you a story..."
-	yield("ad", "kk")
-end
+#def story_telling
+#	puts "Let me tell you a story..."
+#	yield("ad", "kk")
+#end
 
-story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget for the state of CA and #{son2} is Cam Newton's QB coach. I am so proud of both of my boys." }
+#story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget for the state of CA and #{son2} is Cam Newton's QB coach. I am so proud of both of my boys." }
 #***********
 #Using .each RETURNS SAME array since no data manipulation occurs here
 #.each best for looping thru and p or adding integers to sum.
@@ -210,14 +256,17 @@ story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget f
 #hobbies << ["biking", "hiking", "gardening"] #puts 2 sets [[ ]]; not sure what i'm doing wrong.
 #p hobbies
 
+#***********
+#Rel 1>DO THE THING
+#Uncommented starting on line 1
 # #1: Declare & populate with relevant data an array & hash
 #Array Example:
-hobbies = ["biking", "hiking", "gardening"] #puts only 1 set []
-p hobbies
+#hobbies = ["biking", "hiking", "gardening"] #puts only 1 set []
+#p hobbies
 
 #Hash Example:
-fun_stuff = {biking: "road_bike", hiking: "mt tam", gardening: "tomatoes"}
-p fun_stuff
+#fun_stuff = {biking: "road_bike", hiking: "mt tam", gardening: "tomatoes"}
+#p fun_stuff
 
 # #2: Interate thru array & hash using .each, then .map! on array only
 #Iterate thru my array
