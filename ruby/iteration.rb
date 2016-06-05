@@ -147,9 +147,67 @@ story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget f
 #jobs.each { |order, skill| 
 #puts "The #{order} job I had was #{skill}" }
 #***********
-#Rel1>DO THE THING
+#USING .map and .map! TO MODIFY AN ARRAY:
+#.map alone>no change because .map changes to last line??it's missing:
+#jobs = ["budgets", "sales", "proj mgr", "entrepreneur", "chaplain", "teacher"]
+
+		
+#puts "I have many years of business experience, including:"
+#p jobs
+
+#jobs.map { |skill| }
+#HERE I'm MISSING THE LAST LINE OF CODE TO MAKE CHANGE
+#Last expression of block must eval to what I want new array to be
+
+#puts "Not sure what I will see...NO CHANGE"
+#p jobs
+#***********
+#Using .map will not immediately chg array but stores value of modified array
+#jobs = ["budgets", "sales", "proj mgr", "entrepreneur", "chaplain", "teacher"]
+		
+#puts "I have many years of business experience, including:"
+#p jobs
+
+#jobs.map { |skill| 
+#	puts skill    #OLD VALUE = skill
+#	skill.next}   #NEW VALUE = skill.next
+
+#puts "Last line shows what I want modified array to be but...NO CHANGE"
+#p jobs
+#***********
+#Using .map! (BANG-Dangerous Version) immediately chg array in place
+#jobs = ["budgets", "sales", "proj mgr", "entrepreneur", "chaplain", "teacher"]
+		
+#puts "I have many years of business experience, including:"
+#p jobs
+
+#jobs.map! { |skill|    #.map! (BANG modifies value of array in place)
+#	puts skill    #OLD VALUE = skill
+#	skill.next}   #NEW VALUE = skill.next>>Only chgs last ltr in word
+
+#puts "Last line shows what I want modified array to be?NO? Again not on a str of > 1 letter... .next only changes last letter in str to the .next letter. For this challenge must change jobs [] to a single letter"
+#p jobs
+#***********
+#Using .map! and change array to 1 letter str only
+#OLD array: jobs = ["budgets", "sales", "proj mgr", "entrepreneur", "chaplain", "teacher"]
+#CHANGED ARRAY TO FOLLOWING FOR THE EXERCISE:
+#jobs = ["b", "s", "p", "e", "c", "t"]
+
+#puts "I have many years of business experience, including:"
+#p jobs
+
+#jobs.map! { |skill|  #.map! (BANG modifies value of array in place)
+#	puts skill        #OLD VALUE = skill
+#	skill.next}       #NEW VALUE = skill.next
+
+#puts "Last line shows the .next letter?VOILA?"
+#p jobs
+#***********
+#Rel 1>DO THE THING
 
 
+
+############################################################
 
 # def dogsnames
 #   puts "Here are some great dogs!"
