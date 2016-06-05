@@ -40,8 +40,24 @@ p hobbies
 puts "Since using .next, only the last letter of each element in array is changed."
 
 #Rel # 2
-#1
+#1 #Array:
+count = [5, 10, 15, 20]
+p count
 
+count.delete_if { |number| number >= 14 }
+p count	
+
+#Hash:
+count = {
+	5 => "5*1",
+	10 => "5*2",
+	15 => "5*3",
+	20 => "5*4"
+}
+p count
+
+count.delete_if { |number, word| number >= 14 }
+p count
 #################################################
 #THIS IS ALL PRACTICE & #
 #Programming using an array but iteration using method while not .each
