@@ -2,7 +2,7 @@
 #	dogs_names = ["trigger", "pugs", "stella", "barney"]
 #	index = 0
 #		while index < dogs_names.length
-#		puts "#{dogs_names[index]} was the best dog I've ever had."
+#			puts "#{dogs_names[index]} was the best dog I've ever had."
 #		index += 1
 #	end
 
@@ -29,6 +29,89 @@
 #		dogs_names.each do |name, breed|
 #			puts "#{name}, a #{breed}, was the best dog I've ever had."
 #		end	
+
+#.each method
+#["jean", "sam", "jim", "mary", "cheryl", "pat", "step", "anj"].each { |sibling| puts "#{sibling} is a part of my family." }
+
+#Using x as block's name
+#2.times { |x| puts "get off of my desk Missy. When I get to 3, SWAT! #{x+1}" }
+
+#Naming the block
+#4.times { |cookie_count| puts "Cookie Monster has already eaten #{cookie_count + 2} COOOOKIEEEESSS! MMmmmmm Good." }
+
+#No block or paramenter--it just p the message
+#4.times { puts "I have the best grans....1, 2, 3, 4....EVER!" }
+
+#.times method with array
+#grans = ["tyty", "logy", "kt", "mj"]
+#number_grans = grans.length
+#number_grans.times { |i| puts "#{grans[i]} is my fav gran" }
+
+#Using the index / while
+#grans = ["tyty", "logy", "kt", "mj"]
+#	i = 0
+#		while i < grans.length
+#			puts "My fav grans on this line is #{ grans[i] } "
+#		i += 1
+#	end
+#THIS CERTAINLY WORKS BUT I ONLY HAVE 2 LINES CODE ON Lines 47 & 48
+#vs. 5 LINES OF CODE ON Lines 52-56 
+# & IT DOES EXACTLY SAME THING!!!
+
+#Writing a Method that takes a block
+#Block won't run without yield keyword
+#def feed_critters
+#	puts "It's time for dinner, you 3 critters"
+#	yield
+#end	
+
+#feed_critters { puts "Eat your dinner if you want a treat" }
+
+#YIELD can be used multiple times & Eat your dinner p 3x
+#def feed_critters
+#	puts "It's time for dinner, you 3 critters"
+#	yield
+#	yield
+#	yield
+#end	
+
+#feed_critters { puts "Eat your dinner if you want a treat" }
+
+#OR-Make it simpler: YIELD WILL ONLY CAUSE "Eat your dinner... msg to p 3 times"
+#def feed_critters
+#	puts "It's time for dinner, you 3 critters"
+#	3.times { yield }
+#end	
+
+#feed_critters { puts "Eat your dinner if you want a treat" }
+
+#Assign values to block in Yield line
+#def feed_critters
+#	puts "It's time for dinner, you 3 critters"
+#	yield("Trigger", "Puggsy", "Missy") 
+#end	
+
+#feed_critters { |name1, name2, name3| puts "Eat your dinner if you want a treat #{name1}, #{name2} and #{name3}" }
+
+#Another example of assigning values to block in yield line
+#def story_telling
+#	puts "Let me tell you a story..."
+#	yield("ad", "kk")
+#end
+
+#story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget for the state of CA and #{son2} is Cam Newton's QB coach. I am so proud of both of my boys." }
+
+#Using .each just reprints array since no data manipulation occurs here
+#jobs = ["budgets", "sales", "proj mgr", "entrepreneur", "chaplain", "teacher"]
+#	puts "I have many years of business experience, including"
+#	p jobs
+	
+#jobs.each { |jobs| }
+#	puts jobs
+
+#puts "After the .each method, no change is visible."
+#p jobs
+
 
 
 # def dogsnames
