@@ -39,8 +39,11 @@ puts "After .map! & .next used on hobby array the list changes to:"
 p hobbies
 puts "Since using .next, only the last letter of each element in array is changed."
 
+########################################
+
 #Rel # 2
-#1 #Array:
+#1: A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5). 
+#Array:
 count = [5, 10, 15, 20]
 p count
 
@@ -58,6 +61,70 @@ p count
 
 count.delete_if { |number, word| number >= 14 }
 p count
+
+
+#Rel # 2
+#2: A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
+#uses a boolean (i.e., keeps = true, removes = false) 
+#Array:
+count = [25, 30, 35, 40]
+p count
+
+count.keep_if { |number| number >= 29 }
+puts ".keep_if keeps (n>=29) condition=true & deletes condition=false"
+p count
+
+#Hash
+count = {
+	25 => "5*5",
+	30 => "5*6",
+	35 => "5*7",
+	40 => "5*8"
+}
+p count
+
+count.keep_if { |number, xtable| number >= 29 }
+puts ".keep_if keeps (n>=29) condition=true & deletes condition=false"
+p count
+
+
+#Rel # 2
+#3: A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
+
+
+#Rel # 2
+#4: A method that will remove items from a data structure until the condition in the block evaluates to false, then stops.
+#req booleean: delete in order of element all conditions=true; when reaches 1st condition=false>stops the filter
+#.select! deletes false values
+#.take_while passes thru elements until false, then stops, then returns all true
+
+#condition n>79; 65<79=true(keeps filtering & removes 65)
+#condition n>79; 70<79=true(keeps filtering & removes 70)
+#condition n>79; 75<79=true(keeps filtering & removes 75)
+#condition n>79; 80<79=false(stops filter & keeps 80)
+
+#Array
+count = [65, 70, 75, 80, 81]
+p count
+
+count.reject! { |number| number < 79 }
+puts ".reject! filters elements until=false (n<79) condition; true=delete & false=keep"
+p count
+
+#Hash
+count = {
+	65 => "5*5",
+	70 => "5*6",
+	75 => "5*7",
+	80 => "5*8",
+	81 => "(5*8)+1"
+}
+p count
+
+count.reject! { |number, xtable| number < 79 }
+puts ".reject! filters elements until=false (n<79) condition; true=delete & false=keep"
+p count
+
 #################################################
 #THIS IS ALL PRACTICE & #
 #Programming using an array but iteration using method while not .each
