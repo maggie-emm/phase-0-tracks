@@ -86,20 +86,20 @@
 #feed_critters { puts "Eat your dinner if you want a treat" }
 #***********
 #Assign values to block in Yield line
-#def feed_critters
-#	puts "It's time for dinner, you 3 critters"
-#	yield("Trigger", "Puggsy", "Missy") 
-#end	
+def feed_critters
+	puts "It's time for dinner, you 3 critters"
+	yield("Trigger", "Puggsy", "Missy") 
+end	
 
-#feed_critters { |name1, name2, name3| puts "Eat your dinner if you want a treat #{name1}, #{name2} and #{name3}" }
+feed_critters { |name1, name2, name3| puts "Eat your dinner if you want a treat #{name1}, #{name2} and #{name3}" }
 #***********
 #Another example of assigning values to block in yield line
-#def story_telling
-#	puts "Let me tell you a story..."
-#	yield("ad", "kk")
-#end
+def story_telling
+	puts "Let me tell you a story..."
+	yield("ad", "kk")
+end
 
-#story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget for the state of CA and #{son2} is Cam Newton's QB coach. I am so proud of both of my boys." }
+story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget for the state of CA and #{son2} is Cam Newton's QB coach. I am so proud of both of my boys." }
 #***********
 #Using .each RETURNS SAME array since no data manipulation occurs here
 #.each best for looping thru and p or adding integers to sum.
@@ -147,6 +147,8 @@
 #jobs.each { |order, skill| 
 #puts "The #{order} job I had was #{skill}" }
 #***********
+#Rel1>DO THE THING
+
 
 
 # def dogsnames
