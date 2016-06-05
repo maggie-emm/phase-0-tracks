@@ -184,7 +184,8 @@ story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget f
 #jobs.map! { |skill|    #.map! (BANG modifies value of array in place)
 #	puts skill    #OLD VALUE = skill
 #	skill.next}   #NEW VALUE = skill.next>>Only chgs last ltr in word
-
+##WARNING: .next only advances last letter of ea string.
+##WARNING: it doesn't advance to the next element in array
 #puts "Last line shows what I want modified array to be?NO? Again not on a str of > 1 letter... .next only changes last letter in str to the .next letter. For this challenge must change jobs [] to a single letter"
 #p jobs
 #***********
@@ -204,8 +205,71 @@ story_telling { |son1, son2| puts "#{son1} is in charge of the medi-cal budget f
 #p jobs
 #***********
 #Rel 1>DO THE THING
+# INVESTIGATE LATER>>>
+#hobbies = []
+#hobbies << ["biking", "hiking", "gardening"] #puts 2 sets [[ ]]; not sure what i'm doing wrong.
+#p hobbies
 
+# #1: Declare & populate with relevant data an array & hash
+#Array Example:
+hobbies = ["biking", "hiking", "gardening"] #puts only 1 set []
+p hobbies
 
+#Hash Example:
+fun_stuff = {biking: "road_bike", hiking: "mt tam", gardening: "tomatoes"}
+p fun_stuff
+
+# #2: Interate thru array & hash using .each, then .map! on array only
+#Iterate thru my array
+#Same BIG PROB-see below
+#Realized not indexing word. Need to i & += 1 to get entire word
+# DUH>>>>
+#hobbies = ["biking", "hiking", "gardening"] 
+#modified_hobbies = []
+
+#puts "I love to have fun doing these kinds of activities,"
+#p hobbies
+#p modified_hobbies
+
+#hobbies.each { |activity|
+#modified_hobbies << activity.next }
+
+#puts "My modified hobby list is as follows:"
+#puts "BIG PROBLEM>>only last letter in str is modified to next letter"
+#p hobbies
+#p modified_hobbies
+#***********
+#MMVP
+# #2: Interate thru array & hash using .each, then .map! on array only
+#Iterate thru my array using .each
+hobbies = ["biking", "hiking", "gardening"] 
+
+hobbies.each { |activity|
+	puts "My fav activity is #{activity}" }
+
+#Iterate thru my hash using .each
+fun_stuff = {
+	biking: "road_bike", 
+	hiking: "mt tam", 
+	gardening: "tomatoes"
+}
+
+fun_stuff.each { |activity, use|
+	puts "I enjoy #{activity} on #{use}." }
+
+#Iterate thru my array with .map! (Can't use .map! on hash)
+hobbies = ["biking", "hiking", "gardening"] 
+
+	puts "My original hobby array list is:"
+	p hobbies
+
+hobbies.map! { |activity|
+	puts activity
+	activity.next }
+
+puts "After .map! & .next used on hobby array the list changes to:"	
+p hobbies
+puts "Since using .next, only the last letter of each element in array is changed."
 
 ############################################################
 
