@@ -90,6 +90,7 @@ p count
 
 #Rel # 2
 #3: A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
+#Rob, I will start to look @ 3 so we can submit url
 
 
 #Rel # 2
