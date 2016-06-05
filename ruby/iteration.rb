@@ -1,7 +1,7 @@
 # REL #1
 #1: Declare & populate with relevant data an array & hash
 #Array Example:
-hobbies = ["biking", "hiking", "gardening"] #puts only 1 set []
+hobbies = ["biking", "hiking", "gardening"] 
 p hobbies
 
 #Hash Example:
@@ -90,7 +90,27 @@ p count
 
 #Rel # 2
 #3: A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
-#Rob, I will start to look @ 3 so we can submit url
+#Array
+#.select! keeps=true; deletes elements=false
+count = [45, 50, 55, 60]
+p count
+
+count.select! { |number| number > 46 }
+puts ".select! keeps (n>46) condition=true & deletes condition=false."
+p count
+
+#Hash
+count = {
+	45 => "5*9",
+	50 => "5*10",
+	55 => "5*11",
+	60 => "5*12"
+}
+p count
+
+count.select! { |number, xtable| number > 46 }
+puts ".select! keeps (n>46) condition=true & deletes condition=false"
+p count
 
 
 #Rel # 2
@@ -99,10 +119,10 @@ p count
 #.select! deletes false values
 #.take_while passes thru elements until false, then stops, then returns all true
 
-#condition n>79; 65<79=true(keeps filtering & removes 65)
-#condition n>79; 70<79=true(keeps filtering & removes 70)
-#condition n>79; 75<79=true(keeps filtering & removes 75)
-#condition n>79; 80<79=false(stops filter & keeps 80)
+#condition n<79; 65<79=true(keeps filtering & removes 65)
+#condition n<79; 70<79=true(keeps filtering & removes 70)
+#condition n<79; 75<79=true(keeps filtering & removes 75)
+#condition n<79; 80<79=false(stops filter & keeps 80)
 
 #Array
 count = [65, 70, 75, 80, 81]
@@ -128,6 +148,7 @@ p count
 
 #################################################
 #THIS IS ALL PRACTICE & #
+# ***************ALL GOOD REFERENCE CODE****************
 #Programming using an array but iteration using method while not .each
 #	dogs_names = ["trigger", "pugs", "stella", "barney"]
 #	index = 0
@@ -372,40 +393,40 @@ p count
 #p hobbies
 #p modified_hobbies
 #***********
-#MMVP
+#MMVP-----COPIED ABOVE
 # #2: Interate thru array & hash using .each, then .map! on array only
 #Iterate thru my array using .each
-hobbies = ["biking", "hiking", "gardening"] 
+#hobbies = ["biking", "hiking", "gardening"] 
 
-hobbies.each { |activity|
-	puts "My fav activity is #{activity}" }
+#hobbies.each { |activity|
+#	puts "My fav activity is #{activity}" }
 
 #Iterate thru my hash using .each
-fun_stuff = {
-	biking: "road_bike", 
-	hiking: "mt tam", 
-	gardening: "tomatoes"
-}
+#fun_stuff = {
+#	biking: "road_bike", 
+#	hiking: "mt tam", 
+#	gardening: "tomatoes"
+#}
 
-fun_stuff.each { |activity, use|
-	puts "I enjoy #{activity} on #{use}." }
+#fun_stuff.each { |activity, use|
+#	puts "I enjoy #{activity} on #{use}." }
 
 #Iterate thru my array with .map! (Can't use .map! on hash)
-hobbies = ["biking", "hiking", "gardening"] 
+#hobbies = ["biking", "hiking", "gardening"] 
 
-	puts "My original hobby array list is:"
-	p hobbies
+#	puts "My original hobby array list is:"
+#	p hobbies
 
-hobbies.map! { |activity|
-	puts activity
-	activity.next }
+#hobbies.map! { |activity|
+#	puts activity
+#	activity.next }
 
-puts "After .map! & .next used on hobby array the list changes to:"	
-p hobbies
-puts "Since using .next, only the last letter of each element in array is changed."
+#puts "After .map! & .next used on hobby array the list changes to:"	
+#p hobbies
+#puts "Since using .next, only the last letter of each element in array is changed."
 
 ############################################################
-
+#DO NOT USE FOR REFERENCE
 # def dogsnames
 #   puts "Here are some great dogs!"
 #   yield("Trigger", "Pugs")
@@ -413,13 +434,11 @@ puts "Since using .next, only the last letter of each element in array is change
 
 # dogsnames { |dog1, dog2| puts "#{dog1} and #{dog2} are cute dogs!" }
 
-
 # letters = ["a", "b", "c", "d", "e"]
 
 # puts "before each call"
 # p letters
 # new_letters = []
-
 
 # modified_letters = letters.map do |letter|
 #     puts letter
@@ -430,17 +449,15 @@ puts "Since using .next, only the last letter of each element in array is change
 # p letters
 # p modified_letters
 
-
-
-
 # ###################
+#####DO NOT USE FOR REFERENCE
+#1st blush @ challenge:
 
 # numbers = {1 => 'one', 2 => 'two'}
 
 # numbers.each do |digit, word|
 #     puts "#{digit} is spelled out as #{word}"
 # end
-
 
 # simpsons = ["Homer", "Marge", "Bart", "Lisa", "Maggie"]
 
@@ -458,27 +475,25 @@ puts "Since using .next, only the last letter of each element in array is change
 # actors.each {|x, y| puts "#{x} is most famous for their role as #{y}" }
 # p actors
 
+#integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-p integers
+#p integers
 
 #1
 
-integers.reverse_each do |x|
-	if x < 5
-		integers.delete(x)
-	end
-end
+#integers.reverse_each do |x|
+#	if x < 5
+#		integers.delete(x)
+#	end
+#end
 
-p integers
-integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#p integers
+#integers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 #2
-integers.select! { |x| x > 5 }
+#integers.select! { |x| x > 5 }
 
-p integers
-
+#p integers
 
 # integers.each do |x|
 # 	p x
@@ -488,30 +503,11 @@ p integers
 # 	p integers
 # end
 
-
-
-
-
-
-
-
-
-
-
 # integers.map! do |x|
 # 	if x > 5
 # 		x
 # 	end
 # end
-
 # p integers
-
-
-
-
-
-p integers
-
 #food = [meat, eggs, chicken, fish, veggies, potatoes]
-
 #p food
