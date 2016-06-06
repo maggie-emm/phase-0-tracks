@@ -1,127 +1,57 @@
 #pseudocode & write program for interior design client form
 #identify all client info that will be needed
-#include str, i && boolean types of data objects
-#MMVP >> Most Minimal Viable Product
-     
+#client_info: name>str, address>str, eml>str, age>i, married>b, children>i, pets>b
+
+#Greeting:	
 puts "Greetings Designer. Please provide me with your name."
 	designer_name = gets.chomp
-puts "Welcome back, #{designer_name}. \n\rPlease enter your client's information in the field provided."
+puts "Welcome back, #{designer_name}. \n\rPlease enter your client's information in the field provided.\n\r"
 
 #ask designer questions & allow response; store response & call & print @end
-def 
-
-end
-
+client_info = {}
 puts "Client Name:"
-	yield
+	client_info[:name] = gets.chomp
 puts "Address:"
+	client_info[:address] = gets.chomp
+puts "Eml:"
+	client_info[:eml] = gets.chomp
+puts "Age:"
+	client_info[:age] = gets.chomp.to_i
+puts "Single or Partnered? (s/p)"
+	client_info[:living_status] = gets.chomp
+	if client_info[:living_status] == "s"
+		client_info[:living_status] = true
+			puts "single"
+	else client_info[:living_status] = false
+			puts "partnered"
+	end
+puts "Any Children? (y/n)"
+	client_info[:children] = gets.chomp
+	if client_info[:children] == "y"
+		client_info[:children] = true
+			puts "How many?"
+				client_info[:numb_children] = gets.chomp.to_i
+	else client_info[:children] = false
+			puts "No Children"
+	end
+puts "Any Pets? (y/n)"
+	client_info[:pets] = gets.chomp
+	if client_info[:pets] == "y"
+		client_info[:pets] = true
+			puts "How many?"
+				client_info[:numb_pets] = gets.chomp.to_i
+	else client_info[:pets] = false
+			puts "No Pets"
+	end
 
+puts "\n\rThank you. Here is a confirmation of what you entered for #{client_info[:name]}"
 
-	
-clients = {
-	:contacts => {
-		:name => "Maggie Emm", 
-		address:"555 5th St, Fiver, CA, 55555", 
-		eml:"5forever@5mail.com"
-	}, 
-	family:{
-		age:"50-59",
-		married:"true", 
-		children:"2", 
-		pets:"3"
-	}
-}
-
-p clients[:contacts][:name]
-p clients[:contacts][:address]
-p clients[:contacts][:eml]
-p clients[:family][:age]
-p clients[:family][:married]
-p clients[:family][:children]
-p clients[:family][:pets]
-end
-
-
-
-#Couldn't get 3rd piece designs:{} to work. Dropped & left 
-#contacts & family only
-#clients = {
-#	:contacts => {
-#		:name => "Maggie Emm", 
-##		address:"555 5th St, Fiver, CA, 55555", 
-#		eml:"5forever@5mail.com"
-#		}, 
-#	family:{
-#		age:"50-59"
-#		married:"true", 
-#		children:"2", 
-#		pets:"3"
-#		}
-#	designs:{
-#		:art_deco => "false", 
-#		modern:"false", 
-#		country:"false", 
-#		mix_n_match:"true", 
-#		ikea:"true"
-#		}
-#}
-#        :tn	
-#       :city
-#          :address
-#       :state
-#        :zip
-#        :eml
-#Family  :single
-#        :children_y/n ; if y {:name, :age, :gender, :fav_theme}
-#        :pets-y/n ; if y  :type, :number
-#design  :Colors {light, dark, reds, browns, blues, greens}
-#Prefer  :Styles {art_deco, modern, country, mix_n_match, ikea}
-#Life	 :Social {dinner_parties, bar_b_q, MLM_events}
-#Styles  : Hermit {workaholic, foodie, bookworm}
-
-
-#use symbols for keys unless a str is needed
-
-
-#emmanuel = {:contacts => {:name =>"Emmanuel Kaunitz", :address => "blah st."}, :family => {:children => false}}
-
-#p emmanuel[:contacts][:name]
-#p emmanuel[:contacts][:address]
-
-#p emmanuel[:family][:children]
-
-#emmanuel = {:contacts => {name "Emmanuel Kaunitz", :address => "blah st."}, :family => {:children => false}}
-
-#p emmanuel[:contacts][:name] = "Maggie"
-#p emmanuel[:contacts][:name]
-
-#p emmanuel[:contacts][:address]
-
-#p emmanuel[:family][:children]
-
-
-
-
-#Prompt designer/user for all info
-#P "Please enter all appropriate fields."
-
-#Convert any user input to appropriate data type
-
-
-
-
-
-
-#Print hash back out to the screen when the designer has answered
-#   all the questions
-
-
-
-#Give the user the opportunity to update a key (no need to loop,
-#   once is fine). If designer says "none", skip it. But if designer
-#   enters "decor_theme" or any new key, program should ask for new
-#   value and update the key. ****See the hint in challenge info***
-
-
-
-#Print the latest version of hash & exit program. 
+puts "Client Name: #{client_info[:name]}"
+puts "Address: #{client_info[:address]}"
+puts "Eml: #{client_info[:eml]}"	
+puts "Age: #{client_info[:age]}"
+puts "Single or Partnered: #{client_info[:living_status]}"
+puts "Children?: #{client_info[:children]}"
+puts "Number of Children (if applicable): #{client_info[:numb_children]}"
+puts "Pets?: #{client_info[:pets]}"
+puts "Number of Pets (if applicable): #{client_info[:numb_pets]}"
