@@ -47,3 +47,4 @@ joined2 = last_code.join.capitalize
 puts "Thank you for your service. \rYour new cover name is:"
 
 p joined1 + " " + joined2
+#end
