@@ -1,32 +1,49 @@
 #input real name 
-puts "Welcome to Kre8-a-name, trusted by spy's around the globe.\rPlease enter the full name you want disguised. \rIf you are done type 'quit'."
+puts "Welcome to Kre8-a-name, trusted by spy's around the globe.\rPlease enter the first name you want disguised."
 
-#split & swap first/last name
-real_name = gets.chomp.downcase.split(' ').to_a
-real_name_letters = real_name.shuffle!
-#real_name_letters.map.with_index{ |a, u| a * i }
-#real_name_letters.gsub(/[a]/, "e")
+vowels = "aeiou".chars
+consonants = "bcdfghjklmnpqrstvwxyz".chars
+# vowels_hash = {"a"=> "e" , "e" =>"i", "i" => "o", "o" => "u", "'u"=> "a"}
 
+#split, swap first/last name, advance a letter, rejoin
+first_name = gets.chomp.downcase.split('')
+first_code = first_name.map! do |ltr|
+  if vowels.include?(ltr) && ltr != "u"
+    # ltr = vowels_hash[ltr]
+    index = vowels.index(ltr)
+    ltr = vowels[index + 1]
+  elsif ltr == "u"
+    ltr = "a"
+  elsif ltr != "z"
+    index = consonants.index(ltr)
+    ltr = consonants[index + 1]
+  else
+    ltr = "b"
+  end
+end
+joined1 = first_code.join.capitalize
+#p joined1
 
-index = 0
-spy_name = real_name
-while index <real 
+puts "Please enter the last name. Type 'quit' when done."
+last_name = gets.chomp.downcase.split('')
+last_code = last_name.map! do |ltr|
+  if vowels.include?(ltr) && ltr != "u"
+      # ltr = vowels_hash[ltr]
+      index = vowels.index(ltr)
+      ltr = vowels[index + 1]
+  elsif ltr == "u"
+      ltr = "a"
+  elsif ltr != "z"
+      index = consonants.index(ltr)
+      ltr = consonants[index + 1]
+  else
+      ltr = "b"
+  end
+end
+joined2 = last_code.join.capitalize
+#p joined2
 
+#p return msg and code name for user
+puts "Thank you for your service. \rYour new cover name is:"
 
-
-
-#v = ["a", "e", "i", "o", "u"]
-#real_name_letters.rotate!
-
-
-
-#real_name_letters.map!
-
-#vowels = ["a", "e", "i", "o", "u"]
-#	if vowels.include?(letter)
-#		letter_index = vowel.index(letter)
-#		new_letter_index = letter_index +1
-#		letter = vowels[new_letter-index]
-#end
-#}
-#consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z", "b"]
+p joined1 + " " + joined2
