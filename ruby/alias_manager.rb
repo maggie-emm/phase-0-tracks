@@ -1,4 +1,5 @@
 #input real name 
+
 puts "Welcome to Kre8-a-name, trusted by spy's around the globe.\rPlease enter the first name you want disguised."
 
 #def vowel/consonant 
@@ -47,4 +48,3 @@ joined2 = last_code.join.capitalize
 puts "Thank you for your service. \rYour new cover name is:"
 
 p joined1 + " " + joined2
-#end
