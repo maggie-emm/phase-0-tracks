@@ -1,47 +1,51 @@
-#New file for gps2.2
-# Method to create a list
-# input: string of items separated by spaces (example: "carrots apples cereal pizza")
-# steps: 
-  # create hash & assign key, value pairs
-
-
-
-groc_list = {}
-
-def create_list (items, quantity)
-#	groc_list = {}
-	items = items.split(' ')
-	quantity = quantity.split(' ')
-	items = items.each { |item| puts item.to_sym }
-	quantity = quantity.each { |quantity| puts quantity.to_i }
-	groc_list = Hash.new { :items => quantity }
-end	
-
-
-create_list ("carrots apples cereal pizza"), ("10 6 2 1") 
-puts groc_list
-
-
-  # set default quantity
-  # print the list to the console [can you use one of your other methods here?]
-# output: [what data type goes here, array or hash?]
-
-# Method to add an item to a list_use the create method as the source
-# input: item name and optional quantity
-# steps: determine what item & quantity & shovel it in
-# output: p
-
-# Method to remove an item from the list
-# input: ask for the item we want removed
-# steps: locate it & then delete item
-# output: p to verify that it is complete
-
-# Method to update the quantity of an item
-# input:  ask for the item to be changed
-# steps: find item & change to revised qty
-# output: p to verify complete
-
-# Method to print a list and make it look pretty
-# input: ask/call for list to display
-# steps: add formatting to make it easier to see
-# output: p displ
+#define method that creates a hash that consists of grocery items as keys and quantities as values
+def create(items, quantity)
+    #initiate new hash
+    @list = Hash.new
+    
+    #create an array from the string of items separated by spaces(example: "carrots apples cereal pizza")
+    items = items.split(' ')
+    
+    #create an array from the string on quantities
+    quantity = quantity.split(' ')
+    
+    #insert the items and quantities into the hash as key, value pairs
+    @list = {items[0] => quantity[0], 
+        items[1] => quantity[1], 
+        items[2] => quantity[2],
+        items[3] => quantity[3]}
+end 
+#test create method
+create ("carrots apples cereal pizza"), ("10 6 2 1") 
+p @list
+#define method that will add an item and quatity to the existing hash
+def add(item, quantity)
+    @list.store(item, quantity)
+end
+#test add method
+add("milk", "1")
+p @list
+#define a method that will remove an item from the existing hash
+def remove(item)
+    @list.delete(item)
+end
+#test remove method
+remove("carrots")
+p @list
+#define a method that will update the existing quantity of an item
+def update(item, quantity)
+    list2 = {item => quantity}
+    @list.merge!(list2)
+end
+#test update method
+update("apples", "4")
+p @list
+#define a method that will display each pair in a more readable format
+def display
+	puts "-"*20
+	puts "Current groceries to buy:"
+    @list.each{|item, quantity| puts "item: #{item}, quantity: #{quantity}"}
+    puts "-"*20
+end 
+#test display method
+display
