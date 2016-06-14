@@ -26,6 +26,11 @@ class Puppy
   	puts "Time for bed"
   end
 
+#Add method named initialize & print "Initializing new puppy instance ..."
+  def initialize
+  	puts "Initializing new puppy instance ..."
+  end
+  
 end 
 
 #driver code at the bottom - initializes instance of Puppy
