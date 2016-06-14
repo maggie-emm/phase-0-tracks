@@ -63,6 +63,18 @@ class Grans
   end
 end
 
+#driver code-this prints grans data b4 & after
+grans_count = 0
+names_array = []
+
+until grans_count == 50
+  p Grans.new
+  grans_count += 1
+  names_array << Grans.new
+end
+ 
+#p names_array
+
 #driver code: simpler version?
 #grans_array = []
 
@@ -72,15 +84,15 @@ end
 
 #grans_array.each{|gran|gran.girls}
 
-#driver code-this prints grans data b4 & after
-grans_count = 0
-names_array = []
+# #driver code
+# grans_count = 0
+# names_array = []
 
-until grans_count == 50
- p Grans.new
- grans_count += 1
- names_array << Grans.new
-end
+# until grans_count == 50
+#  p Grans.new
+#  grans_count += 1
+#  names_array << Grans.new
+# end
  
 p names_array
 
