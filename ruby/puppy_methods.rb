@@ -30,7 +30,7 @@ class Puppy
   def initialize
   	puts "Initializing new puppy instance ..."
   end
-  
+
 end 
 
 #driver code at the bottom - initializes instance of Puppy
@@ -45,3 +45,37 @@ Stella.roll_over
 Stella.dog_years(9)
 #bed time
 Stella.go_to_bed
+
+#-------------------------------------
+
+#design and implement own class
+class Grans
+#initialize method 
+  def intialize
+  	puts "Initializing new Grans class..."
+  end
+#at least two other instance methods
+  def boy
+  	puts "My fav grandson is KT."
+  end
+  def girls
+  	puts "My 3 fav granddaughters are TyTy, Logy & MJ."
+  end
+end
+
+#driver code
+grans_count = 0
+names_array = []
+
+until grans_count == 50
+  p Grans.new
+  grans_count += 1
+  names_array << Grans.new
+end
+ 
+#p names_array
+
+names_array.each do |grans|
+	grans.boy
+	grans.girls
+end
