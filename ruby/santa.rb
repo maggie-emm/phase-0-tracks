@@ -11,13 +11,13 @@ class Santa
 #eat_milk_and_cookies method-takes a cookie type (example: "snickerdoodle")
 #as a parameter and prints "That was a good <type of cookie here>!" 
 	def eat_milk_and_cookies(cookie)
-		puts "That was a good #{cookie}!"
+		puts "That was a good #{cookie} cookie!"
 	end
 #code below your class declaration to check that you're able to initialize
 #a Santa instance and call its methods.	
-	def check
-		puts
-
 end
 
-#driver code 
+#driver code
+santa = Santa.new
+santa.speak
+santa.eat_milk_and_cookies("Gingersnap")
