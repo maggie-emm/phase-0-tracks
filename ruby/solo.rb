@@ -9,6 +9,27 @@
 
 class Patterns
 
+#characteristics:
+#attributes that will not change:
+	attr_reader :sew
+
+#attributes that are accessable to be set & changed:
+	attr_accessor :crochet, :bead	
+	
+#initialize a characteristic
+	def initialize(sew, crochet, bead)
+		@sew = sew
+		@crochet = crochet
+		@bead = bead
+		puts "Initializing a new #{sew}, #{crochet}, #{bead} pattern."
+	end
+end
+
+	def 
+#Driver Code********
+dress = Patterns.new("Crochet", "Elegant Sparkly Scarf", "G", "6 hours", 3 )
+
+
 # 3 attributes w/ 2 data types; values vary; i.e.; age
 # 1 attr & data_type: 
 	# :crochet
@@ -26,8 +47,5 @@ class Patterns
 # 3 methods w/ 1  takes an argument
 	# arg=boolean if/else > sew: Is this an item of clothing? (y/n)
 
-#attributes that will not change:
-	attr_reader 
 
-#attributes that are accessable to be set & changed:
-	attr_accessor :crochet, :sew, :beads
+
