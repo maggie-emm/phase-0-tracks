@@ -101,23 +101,16 @@
 # 3 methods w/ 1  takes an argument
 	# arg=boolean if/else > sew: Is this an item of clothing? (y/n)
 
-#class Car
+
 class Pattern
-	
-  #attr_reader :year
-  #attr_accessor :type, :color
+
 #attributes that don't change:
 attr_reader :type
 
 #attributes that change:
 attr_accessor :color, :time
 
-# def initialize(type, color, year)
-#   @type = type
-#   @color = color
-#   @year = year
-#   puts "Initializing a new car: #{year}, #{color}, #{type}."
-# end
+
 def initialize(type, color, time)
 	@type = type
 	@color = color
@@ -126,89 +119,50 @@ def initialize(type, color, time)
 end
 
 # =============DRIVER CODE===================
-# def drive(miles)
-#   puts "The car drove #{miles} miles."
-# end
+
 	def type(type)
 		puts "The pattern is #{type}."
 	end
-# def broke_down(location)
-#   puts "The car broke down, dispatch AAA to #{location}."
-# end
-	def colork(color)
+
+	def color(color)
 		puts "The pattern is #{color}."
 	end
-# def car_value(value)
-#   puts "The car has a value of #{value}."
-# end
+
 	def time(time)
 		puts "This pattern takes about #{time} hours to make."
 	end
 end
-# end
 
 
-# =============DRIVER CODE===================
-=begin
-sedan = Car.new("Honda", "tan", 1994)
-sedan.drive(35)
-sedan.broke_down("45th street btw 1st and 2nd Ave.")
-sedan.car_value(15000)
-=end
-#vest = Pattern.new("Sparkly Vest", "Q", 6)
-
-# # USER INTERFACE
-
-# cars = []
-# puts "Lets find some cars for you today. How many are you looking for?"
-# number = gets.chomp.to_i
 patterns = []
 puts "How many crochet patterns do you want to research today?"
 number = gets.chomp.to_i
 
-# number.times do |number|
-# puts "What type of car are you looking for?"
-# type = gets.chomp
 number.times do |number|
 puts "What type of pattern do you want to crochet?"
 type = gets.chomp
 
-# puts "What color do you want the car in?"
-# color = gets.chomp
 puts "What color do you want your item to be?"
 color = gets.chomp
 
-# puts "What year do you want?"
-# year = gets.chomp.to_i
 puts "How many hours do you want to spend?"
 time = gets.chomp.to_i
 
-# cars << Car.new(type, color, year)
-# end
 patterns << Pattern.new(type, color, time)
 end
 
-# def print_cars(car_list)
-#   puts "Here's a list of cars we found for you today:"
-#   puts "========================================="
-#   car_list.each do |car|
-#     puts "Type: #{car.type}:"
-#     puts "Color: #{car.color}"
-#     puts "Year: #{car.year}"
-#     puts "==========================================="
-#   end
-# end
+
 def print_patterns(pattern_list)
 	puts "Based on your responses, here are the patterns I have chosen for you:"
 	puts "="*30
-	pattern_list.each do |pattern|
-		puts "This pattern is a: #{pattern.type},"
-		puts "The Color of the item is: #{pattern.color}, and"
-		puts "The approximate Number of Hours it will take to make is: #{pattern.time}."
+	pattern_list.each do |patterns|
+		puts "This pattern is a: #{type},"
+		puts "The Color of the item is: #{color}, and"
+		puts "The approximate Number of Hours it will take to make is: #{time}."
 		puts "="*30
 	end
 end
 
-# print_cars(cars)
+
 print_patterns(patterns)
 
