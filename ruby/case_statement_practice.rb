@@ -34,3 +34,5 @@ end
 print "The " +  sport + " athlete will most likely use this equipment: " + assoc_equip
 
 puts "\n+++++++++++++++++++++++++++"
+
+# Not sure why git push origin case_statement_practice wouldn't push file to git hub
