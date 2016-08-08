@@ -1,4 +1,4 @@
-# Git Definitions for Coyote 2016
+# Git Definitions for Coyote 2016; August
 
 **Instructions: ** Define each of the following Git concepts.
 
@@ -15,3 +15,5 @@ What is a branch and why would you use one?
 
 * What is a merge conflict?
   - A merge conflict occurs when 2 different changes are made to the same line of code. This must be resolved because the computer will not know which action to take.
+
+* TAG!! =D  You're it, Glenna! 
