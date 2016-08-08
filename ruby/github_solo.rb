@@ -165,4 +165,3 @@ end
 
 
 print_patterns(patterns)
-

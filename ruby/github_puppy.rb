@@ -1,4 +1,5 @@
-# PUPPY CLASS DESIGN
+# create puppy class in pseudocode
+#PUPPY CLASS DESIGN
 # SPECIES ------------------------
 # Puppiulous Socuteofus
 
