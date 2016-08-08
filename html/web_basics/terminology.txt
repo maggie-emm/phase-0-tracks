@@ -1,0 +1,10 @@
+client:  my local computer 
+
+server:  another computer (the Internet) in order to access docs, pics, songs, etc
+
+protocol: conversation that occurs according to a known standard of communication
+
+rendering: the process of converting text and image data to a human-viewable document
+
+HTML: Hypertext Markup Language
+
