@@ -6,3 +6,5 @@ protocol: conversation that occurs according to a known standard of communicatio
 
 rendering: the process of converting text and image data to a human-viewable document
 
+HTML: Hypertext Markup Language
+
