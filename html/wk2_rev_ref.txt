@@ -28,4 +28,4 @@ Very briefly, explain the purpose of the following elements:
 - ul: unordered list usually with bullets or other indicater for each line
 - table: (my fav) formatting text as in a grid or table
 - tr: table row contains <th>table header</th> or <td>table data (data in that particular cell)</td>
--td: table data in a cell
+- td: table data in a cell
