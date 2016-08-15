@@ -1,0 +1,31 @@
+Briefly describe your understanding of what the browser does, including definitions of the following:
+
+The browser is the medium for accessing information via the internet.
+- client: local terminal/computer
+- server: cloud or access point for getting information
+- render: process of downloading and populating the local terminal with the information you have just accessed.
+
+What is HTML? In your answer, include definitions of the following:
+HTML (Hypertext Markup Language) is a language that is used to format most web pages. The HTML file uses the following:
+
+- tag: formatting codes that identify to the web browser the parts of your web pages and how you want to lay them out
+- element: syntax that allows the user to format their text in specific ways, like in a Word doc; i.e., make the text bold, italic, underlined, etc.
+- node: devices or data points on a larger network
+- attribute: is usually like a name-value pair with an HTML element; it specifies or gives additional meaning or value to the element it is associated with. 
+- block element: usually identified within a <div>, <h1>-<h6>, <p> or <form>, starts a new line & formats your text in a rectangular shape
+- inline element: usually identified within a <span>, <a>, or <img>, does not start a new line but formats the text inside
+
+Very briefly, explain the purpose of the following elements:
+- head: part of the root element that includes a title
+- body: the tag that identifies the part of the file that contains your web page content
+- p: a paragraph tag
+- form: the tag the identifies the area that will contain form attributes
+- div: division tags that divide content into meaningful sections
+- span: an in-line level element that indicates the content will be displayed on the same line
+- select: a form option element that identifies an HTML List Type Selector
+- h2: header that has a lower priority than h1 but higher priority than h3-h6
+- ol: ordered (numbered) list
+- ul: unordered list usually with bullets or other indicater for each line
+- table: (my fav) formatting text as in a grid or table
+- tr: table row contains <th>table header</th> or <td>table data (data in that particular cell)</td>
+- td: table data in a cell
