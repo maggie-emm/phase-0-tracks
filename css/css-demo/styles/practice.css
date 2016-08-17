@@ -1,0 +1,50 @@
+section#contact-info {
+	font-size: .8em;
+}
+
+.job {
+	background-color: #e9e5dc;
+	border-radius: 20px;
+	padding-top: .02px;
+	padding-left: .5px;
+	padding-bottom: .005px;
+	text-indent: .50em;
+}
+
+.ul_smaller_font {
+	font-size: .8em;
+}
+
+/* 
+#1: Cascading in CSS means styles are applied at up to 4 different levels. The properties flow down from top to bottom. 
+TOP: any style that is applied using a "style" attribute
+2)   any style defined in a <style> element within the web page (internal style sheet)
+3)   any style defined in the external style sheet(s) linked to the web page
+4)   the settings that the visitor chooses in his or her browser.
+
+#2: pseudoselector definition: Pseudo classes are bolted on to selectors to specify a state or relation to the selector. They take the form of selector:pseudo_class { property: value; }, simply with a colon in between the selector and the pseudo class.
+;
+Pseudoselector Rule:
+; a:link {
+	color: blue;
+}
+
+#3: http://www.htmldog.com/guides/css/intermediate/pseudoclasses/
+https://css-tricks.com/pseudo-class-selectors/ 
+
+#4: div > p { 
+    background-color: yellow;
+} */
+
+/* <==From panda index.html==>
+h3 {
+  display: block;
+  border: 2px;
+  width: 100%;
+  height: 50px;
+  margin: 10px;
+  text-indent: 40px;
+  padding-top: 15px;
+  border-radius: 15px;
+  background-color: #e9e5dc;
+}*/
