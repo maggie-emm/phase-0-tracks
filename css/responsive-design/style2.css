@@ -1,7 +1,19 @@
+body {
+  max-width: 960px;
+}
+
+.side.side {
+  display: table;
+}
+
 blockquote {
   border-left: 5px solid blue;
-  padding: 15px;
-  margin-left: 0px;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  margin-left: 350px;
+  margin-right: 0px;
 }
 
 cite {
@@ -9,33 +21,70 @@ cite {
   margin-top: 10px;
 }
 
+/*#leftcolumn {
+  position: absolute; left;
+  width: 250px;
+  display: table-column-group;
+  vertical-align: bottom;
+  margin-top: 50px;
+  float: left;*/
+}
 #external-links ul {
+  position: relative;
+  top: 10px;
   list-style-type: none;
-  padding-left: 0px;
+  padding-left: 30px;
 }
 
 #external-links {
-  width: 20%;
-  display: inline-block;
-  vertical-align: middle;
-  float: left;
+  position: absolute;
+  top: 125px;
+  left: 2px;
+  width: 250px;
+  display: table-column-group;
+  vertical-align: bottom;
+  padding-left: 15px;
+/*  margin-top: 50px;
+  float: left;*/
 }
 
-/*main {
-  width: 75%
-  vertical-align: right;
+title {
+  text-align: center;
 }
-*/
+
+#pinterest {
+  text-align: justify;
+  margin-right: -60px;
+  margin-left: 350px;
+  padding-bottom: 10px;
+}
+
+main {
+  width: 756px
+  display: block;
+};
+
+#main-header {
+  position: relative;
+  left: 300px;
+ /* margin-left: 300px;*/
+ /* padding-top: 20px;
+  text-align: center;*/
+}
+
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
 img {
-  max-width: 75%;
+  max-width: 85%;
+  position: right;
+  margin-left: 175px;
 }
 
 figure {
-  margin-left: 0px;
+  margin-left: 175px;
   margin-right: 0px;
+/*  position: right;*/
 }
 
 figcaption {
@@ -43,13 +92,60 @@ figcaption {
   text-align: right;
 }
 
+#dec-prox1 {
+  text-align: right;
+}
+
+#dec-prox2 {
+  border-top: 2px solid blue;
+  border-right: 2px solid blue;
+  border-bottom: 2px solid blue;
+  border-left: 2px solid blue;
+  padding: 8px;
+  margin-left: 80px;
+  text-align: center;
+  height: 60px;
+}
+
+#dec-prox3 {
+  border-top: 4px double blue;
+  border-right: 40px double blue;
+  border-bottom: 2px solid blue;
+  border-left: 40px double blue;
+  padding: 8px;
+  padding-bottom: 100px;
+  margin-left: 80px;
+  text-align: center;
+}
+
+#dec-prox4 {
+  margin-top: -115px;
+  text-align: center;
+  list-style-position: inside;
+}
 /*size extire page below*/
-#page-width {
+/*#page-width {
   max-width: 960px;
   min-width: 185px;
-}
+}*/
 
 /*section h1 {
 
 }*/
 /*size extire page above*/
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+
+@media screen and (max-width: 185px) {
+  body {
+    font-size: 1.5em
+  }
+
+  .side.side {
+    display: table;
+  }
+}
