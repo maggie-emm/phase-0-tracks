@@ -1,14 +1,16 @@
 html {
-	border: double;
+/*	border: double;*/
 	color: blue;
 	width: 80%;
 	margin-top: 30px;
 	margin-left: 70px;
+	background-color: blue;
 }
 
 h1 {
 	font-family: Arial;
-	color: green;
+	color: #7CFC00;
+	text-shadow: red 2px 2px;
 	font-size: 40px;
 	text-align: center;
 	font-variant: small-caps;
@@ -33,4 +35,11 @@ h2 {
 	top: 300px;
 	left: 300px;
 	z-index: 1
+}
+
+#glasses {
+	position: relative;
+	top: 50px;
+	left: 260px;
+	z-index: 3;
 }
