@@ -1,0 +1,39 @@
+Week 3: Review & Reflect Questions:
+
+1) Name at least three categories of CSS adjustments (example: colors)?
+	font-size: (value can be in px, %, or many settings like: small, x-small, large, xx-large, etc.)
+	text-align: (value can be left, right, center, justify)
+	padding: (by itself pads the outside of the content box or can identify specific padding sides (top, left, right, bottom) in px, or %)
+
+2) What are the three ways to link a CSS rule to an HTML document? Which one is the best and why?
+	linking a CSS rule to an HTML document can be done via class (<section class="intro"> on html & .intro on css file), id (<p id="trouble"> on html & #trouble on css file) or selector (on css identify the selector you want everything with that selector tag to have the styling applied to: html {} will apply the style to the entire document).
+
+	not sure there is a "best" as each one has its own uses. If i want entire doc styled according to the CSS Properties I've defined, I use the selector. If there is 1 selector that I want styled a certain way, I use the #id. If several of same selector, best to use class.
+
+3) What is a selector? Give examples of at least three types of selectors.
+	Selectors are the HTML elements; i.e.,
+		<div>
+		<p>
+		<section>
+
+4) What is the box model?
+	Box model identifies how html is set up:
+		margin	(specifies space from viewport edges)
+		border	(outside the padding)
+		padding (surrounds content)
+		content (center)
+
+5) Explain and give an example of the cascading effect of CSS.
+	Cascading effect of CSS means there is a flow of properties from the top down up to 4 different levels; 
+		Level 1: style attribute
+		Level 2: <style> element
+		Level 3: any style defined in an external style sheet (like a "styles.css" file that is linked to the HTML file)
+		Level 4: settings in the user's browser
+
+		An example is if you have not applied any style to your HTML code yet you do have a linked .css file, then all the style is applied as a result of Level 3.
+
+		Another example is if you have style applied at Level 3 (say a text-decoration: blink; property, but the user views only on Chrome, not Mozilla (only browser supporting it), then it will not be displayed to the user.
+
+6) Name two CSS techniques that assist in responsive design.
+		1) Use the Dev Tools feature (View / Developer / Developer Tools) in the browswer to resize the viewport window to see the best way to adjust your Media Query for the device you are designing for.
+		2) Use Dev Tools' mobile device preview (page may require refresh after clicking mobile phone icon & adjusting for device type and page orientation)
