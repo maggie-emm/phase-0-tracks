@@ -11,10 +11,12 @@ fur_color = gets.chomp
 
 puts "Is the hamster a good candidate for adoption? (y/n)" #(boolean)
 candidate_answer = gets.chomp
-if candidate_answer == "y"
+if candidate_answer == "y"# || "yes" || "Y" || "Y"
   good_candidate = true
-elsif candidate_answer == "n"
+elsif candidate_answer == "n" #|| "no"
   good_candidate = false
+# else
+# 	puts "I didn't understand your answer. Please use 'y' or 'n'."
 end
 
 puts "How old is the hamster?"  #(int)
