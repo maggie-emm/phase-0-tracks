@@ -1,0 +1,57 @@
+Week 4 Review & Reflect
+
+Variables
+1. What is a variable? Why might a programmer use a variable?
+A variable is a name (without quotes) that you give a value that allows the programmer to call it within the program.
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+Ruby uses a right-side evaluation process. It evaluates the right side functions from left to right then assigns the result to the left side variable. EX:
+  first_name = "Abraham"
+  last_name = "Lincoln"
+  full_name = first_name + last_name
+  Ruby processes right side first from left to right: full_name => Abraham Lincoln
+if
+  first_name = "Abraham"
+  last_name = "Lincoln"
+  full_name = last_name + first_name
+  full_name => Lincoln Abraham
+
+Data Types
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+string=> a grouping of characters identified within "". Ex: string = "hum dinger"
+integer=> a whole number, either postitve or negative. Ex: 5, 20000000, -32
+float=> a decimal number, either positive or negative. Ex: 5.5, 20000000.2, -32.32323232
+nil=> a variable with the value of nothing. Ex: middle_name = nil =>0
+boolean=> a true or false value. Ex: "dog" == "cat" =>false; 4 >= 3 =>true
+
+Algorithms
+4. What is an algorithm?
+
+5. What are two common categories of algorithm in computer science? 
+
+Methods
+6. What is a method? Why might a programmer choose to use a method?
+
+7. Define the following terms as they relate to a method. 
+
+return value
+side effect
+parameter
+argument
+implicit return
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control?
+Control flow techniques using boolean variables and conditional statement code like with if/else, while & until are used to direct the program to take different actions based on different conditions. User input directs the specific response as written in the code. 
+Programmers use control flow so that repetitive actions can be taken using the same & limited amount of code.
+
+10. Define the following terms as they relate to flow control.
+
+loop=> a bit of code that runs repeatedly UNTIL a specfied condition or boolean variable is met.
+if=> whatever code is written on the same line following it has a value matching the identified valid_input, then the next line is run. The computer will take the 1st valid_input answer and return it.
+else=> if none of the "if" statements return valid_input, the "else" condition is returned; it is the last condition.
+elsif=> any additional conditions after the "if" and before the "else"; there can be many.
+while=> a loop or repetitive code that stops when its condition is "false".
+until=> repetitive code that runs until its condition is "true".

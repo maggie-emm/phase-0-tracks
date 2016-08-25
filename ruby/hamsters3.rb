@@ -13,7 +13,7 @@ puts "Is the hamster a good candidate for adoption? (y/n)" #(boolean)
 candidate_answer = gets.chomp
 if candidate_answer == "y"
   good_candidate = true
-elsif candidate_answer == "n"
+else candidate_answer == "n"
   good_candidate = false
 end
 
