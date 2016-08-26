@@ -1,7 +1,7 @@
 #Encript method advances each letter by 1; assume lower case; must maintain spaces
 
 # add variable for word to be encrypted
-word = "jumped"
+word = "cat"
 #anticipate: dbu
 
 #def method & establish an index
@@ -14,8 +14,8 @@ while index < word.length
 	index += 1
 end
 
-if word.include? "!"
-	word.sub(/["!"]/, '""')
+if word.include? " "
+	word.sub(/["!"]/, '" "')
 end
 	
 
@@ -25,3 +25,25 @@ p word
 end
 
 encrypt(word)
+
+
+#def decrypt method - reverse the process to return original password
+def decrypt(word)
+	
+#index letters in alphabet
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	letter = 0
+	
+#index (word) to find each letter's index
+while letter < word.length
+	if word[letter] != " "
+		word[letter] = alphabet[alphabet.index(word[letter]) -1]
+	end
+	
+letter +=1
+end
+
+p word
+end
+
+decrypt(word)
