@@ -1,8 +1,8 @@
 #Encript method advances each letter by 1; assume lower case; must maintain spaces
 
 # add variable for word to be encrypted
-word = "cat"
-#anticipate: dbu
+# word = "drink"
+#anticipate: esjol
 
 #def method & establish an index
 def encrypt(word)
@@ -18,14 +18,15 @@ if word.include? " "
 	word.sub(/["!"]/, '" "')
 end
 	
-
 #return the new word
 p word
 
 end
 
-encrypt(word)
+# encrypt(word)
 
+# decrypt(encrypt("swordfish"))
+# word = "drink"
 
 #def decrypt method - reverse the process to return original password
 def decrypt(word)
@@ -46,4 +47,19 @@ end
 p word
 end
 
-decrypt(word)
+# decrypt(word)
+
+#add driver code to ask user encrypt/decrypt? then password name.
+puts "Would you like to encrypt or decrypt a password?"
+
+ 	answer = gets.chomp
+
+puts "What is the password?"
+
+	word = gets.chomp
+
+if answer == "encrypt"
+  encrypt(word)
+else
+  decrypt(word)
+end
