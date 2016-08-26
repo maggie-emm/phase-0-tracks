@@ -13,11 +13,7 @@ puts "Is the hamster a good candidate for adoption? (y/n)" #(boolean)
 candidate_answer = gets.chomp
 if candidate_answer == "y"# || "yes" || "Y" || "Y"
   good_candidate = true
-<<<<<<< HEAD
 else candidate_answer == "n"
-=======
-elsif candidate_answer == "n" #|| "no"
->>>>>>> 48cdd238e34a9ac3c9b3389d3b49032d5e6fde52
   good_candidate = false
 # else
 # 	puts "I didn't understand your answer. Please use 'y' or 'n'."
