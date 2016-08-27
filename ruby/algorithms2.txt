@@ -1,3 +1,26 @@
+Release 0: Tutorial for Rudolph the Robot: How to use an elevator
+
+- enter building & navigate to bank of elevators
+- while delivery in progress
+- until 
+	- light labeled["up", "^", "down", "img=down carrot"] turns on
+	- doors open
+		- stand patiently in line
+- move into box-like space called "elevator"
+	- if floor # = -20..159
+		- press the number corresponding to the floor you want
+	- else 
+		- go home because I'm not letting you vacation at Burj Khalifa in Dubai without me
+- until elevator stops
+	- hum loudly the theme song to Aretha Franklin's "R-E-S-P-E-C-T"
+		- if doors open && floor # = desired floor #
+			- pereginate out and follow delivery directions
+		- else 
+			- screem at the top of your lungs, "Let me outa here"
+- when delivery complete
+	- instructions for delivery.reverse
+- come home and join me in a "high ball"; you deserve it
+
 
 
 Release 1: Find a Real-Life Algorithm
