@@ -1,0 +1,8 @@
+
+
+Release 1: Find a Real-Life Algorithm
+
+def zucchini_mash
+zucchini_mash = "Best mash in town"
+
+
