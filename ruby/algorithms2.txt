@@ -5,4 +5,58 @@ Release 1: Find a Real-Life Algorithm
 def zucchini_mash
 zucchini_mash = "Best mash in town"
 
+food = ['bell pepper'. 'onion', 'garlic', 'zucchini']
+food.count = 4
+food.index
+	0 = "bell pepper"
+	1 = "onion"
+	2 = "garlic"
+	3 = "zucchini"
+
+Get all food:
+
+- take out bell pepper(index = 0) from refrig
+	- if mood = happy
+		choose yellow
+	- elsif mood = angry
+		choose red
+	- else
+		choose green
+- put on counter (iterate this step for all ingredients you remove from refrig)
+
+- take out onion & garlic(index 1 & 2) from refrig
+	- if date = tonight
+		choose 1/2 onion && 0 garlic
+	- else
+		choose 1 onion && 5 cloves of garlic
+
+- take out zucchini(index = 3) from refrig
+	- if hungry && happy
+		choose 2 yellow
+	- if hungry || slightly happy
+		choose 2 green
+	- if !hungry & !happy
+		forget the zucchini and eat a piece of chocolate cake
+
+- while using a sharp knife
+
+- set food on cutting board with stem facing up toward ceiling
+- cut_up food
+	- until food has been completely cut up, except for stems
+		- cut into 1/4" slices
+		- cut into 1/4" up to 1/2" chunks
+- put chunks in a pan
+
+- drizzle chunks with olive oil 
+
+- while food is being cooked
+	- saute and stir
+	- add additional secret seasoning
+		- you have to guess at this 
+	- stop when cooked 
+
+- place on plate with cut up cucumber slices
+
+- EAT! and ENJOY!!!
+
 
