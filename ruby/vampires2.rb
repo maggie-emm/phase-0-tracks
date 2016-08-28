@@ -12,6 +12,8 @@ puts "How old are you?" #(Int)
 puts "What year were you born?" #(Int)
 	year_born = gets.chomp.to_i
 
+current_year = Time.now.year
+correct_age = current_year - year_born
 
 valid_input = false
 until valid_input
