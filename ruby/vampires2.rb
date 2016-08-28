@@ -7,10 +7,10 @@ puts "What is you name?" # (Str)
 	name = gets.chomp
 
 puts "How old are you?" #(Int)
-	age = gets.chomp
+	age = gets.chomp.to_i
 
 puts "What year were you born?" #(Int)
-	year_born = gets.chomp
+	year_born = gets.chomp.to_i
 
 
 valid_input = false
