@@ -4,7 +4,7 @@
 #Ask new employees following questions:
 
 puts "What is your name?" # (Str)
-	name = gets.chomp
+	name = gets.chomp.to_s
 
 puts "How old are you?" #(Int)
 	age = gets.chomp.to_i
@@ -13,9 +13,9 @@ puts "What year were you born?" #(Int)
 	year_born = gets.chomp.to_i
 
 current_year = Time.now.year
-correct_age = current_year - year_born
+correct_age = current_year.to_i - year_born.to_i
 
-	if correct_age == age
+	if correct_age == age.to_i
 		correct_age = true
 	else
 		correct_age = false
@@ -69,21 +69,6 @@ end
 # This may mean repeatedly updating a variable as each condition is checked, so that 
 # the variable always contains the most precise result.
 
-
-	if correct_age = true && (garlic_preference == "y" || insurance_preference == "y")
-		puts "Probably not a vampire"
-		#tests good
-	elsif correct_age = false && (garlic_preference == "n" || insurance_preference = "n")
-		puts "Probably a vampire"
-	elsif correct_age = false && garlic_preference == "n" && insurance_preference == "n"
-		puts "Almost certainly a vampire"
-	elsif name == "Drake Cula" || "Tu Fang"
-		puts "Definitely a vampire"
-	else 
-		puts "Results inconclusive"
-	end
-# DEBUG: Getting last result...
-
 # Print the result at the end of the survey.
 
 puts "\nHere are the results of your interview questions:"
@@ -92,28 +77,41 @@ puts "Age: #{age}; Year Born: #{year_born}, Computed Age: #{correct_age}"
 puts "Garlic preference: #{garlic_preference}"
 puts "Health Insurance preference: #{insurance_preference}"
 
-#driver code
-name = "m"
-p name
-age = 6
-year_born = 2011
-current_year = Time.now.year
-correct_age = current_year - year_born
-	if correct_age == age
-		correct_age = true
-	else
-		correct_age = false
+#put conditions in place
+	if name == "Drake Cula" || name == "Tu Fang"
+		puts "Definitely a vampire"
+		#Test OK
+	elsif (correct_age == true) && (garlic_preference == "y" || insurance_preference == "y")
+		puts "Probably not a vampire"
+		#test ok
+	elsif (correct_age == false) && (garlic_preference == "n" || insurance_preference == "n")
+		puts "Probably a vampire"
+		#test ok
+	elsif (correct_age == false) && (garlic_preference == "n") && (insurance_preference == "n")
+		puts "Almost certainly a vampire"
+		#test FAILED; prints: Probably a vampire
+	else 
+		puts "Results inconclusive"
+		#test ok: age=true;garlic=n;ins=n
 	end
-p correct_age
-garlic_preference = "y"
-p garlic_preference
-insurance_preference = "n"
-p insurance_preference
-	
-	
-	if correct_age = true && (garlic_preference == "y" || insurance_preference == "y")
-	 	puts "Probably not a vampire"
-	 else
-	 	puts "failed test"
-	 end
-	 # BUG: when age is false but either garlic || insurance is "y" => puts msgs incorrectly
+
+
+# # DEBUG: all test ok except for "age=false && ga"	
+
+# #driver code
+# name = "m"
+# p name
+# age = 6
+# year_born = 2011
+# current_year = Time.now.year
+# correct_age = current_year - year_born
+# 	if correct_age.to_i == age.to_i
+# 		correct_age = true
+# 	else
+# 		correct_age = false
+# 	end
+# p correct_age
+# garlic_preference = "y"
+# p garlic_preference
+# insurance_preference = "n"
+# p insurance_preference
