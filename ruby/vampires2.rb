@@ -15,15 +15,19 @@ puts "What year were you born?" #(Int)
 current_year = Time.now.year
 correct_age = current_year - year_born
 
-correct_age == age
-
-valid_input = false
 	if correct_age == age
-		valid_input = true
-		puts "WereWolf, Inc. has verified that your age is correct"
+		correct_age = true
 	else
-		puts "WereWolf, Inc. has identified an issue with your age"
+		correct_age = false
 	end
+
+# valid_input = false
+# 	if correct_age == age
+# 		valid_input = true
+# 		puts "WereWolf, Inc. has verified that your age is correct"
+# 	else
+# 		puts "WereWolf, Inc. has identified an issue with your age"
+# 	end
 
 valid_input = false
 until valid_input
@@ -113,5 +117,3 @@ puts "Name: #{name}"
 puts "Correct Age: #{correct_age}"
 puts "Garlic preference: #{garlic_preference}"
 puts "Health Insurance preference: #{insurance_preference}"
-
-
