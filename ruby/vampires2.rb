@@ -72,6 +72,7 @@ end
 
 	if correct_age = true && (garlic_preference == "y" || insurance_preference == "y")
 		puts "Probably not a vampire"
+		#tests good
 	elsif correct_age = false && (garlic_preference == "n" || insurance_preference = "n")
 		puts "Probably a vampire"
 	elsif correct_age = false && garlic_preference == "n" && insurance_preference == "n"
@@ -80,6 +81,7 @@ end
 		puts "Definitely a vampire"
 	else 
 		puts "Results inconclusive"
+	end
 # DEBUG: Getting last result...
 
 # Print the result at the end of the survey.
@@ -89,3 +91,29 @@ puts "Name: #{name}"
 puts "Age: #{age}; Year Born: #{year_born}, Computed Age: #{correct_age}"
 puts "Garlic preference: #{garlic_preference}"
 puts "Health Insurance preference: #{insurance_preference}"
+
+#driver code
+name = "m"
+p name
+age = 6
+year_born = 2011
+current_year = Time.now.year
+correct_age = current_year - year_born
+	if correct_age == age
+		correct_age = true
+	else
+		correct_age = false
+	end
+p correct_age
+garlic_preference = "y"
+p garlic_preference
+insurance_preference = "n"
+p insurance_preference
+	
+	
+	if correct_age = true && (garlic_preference == "y" || insurance_preference == "y")
+	 	puts "Probably not a vampire"
+	 else
+	 	puts "failed test"
+	 end
+	 # BUG: when age is false but either garlic || insurance is "y" => puts msgs incorrectly
