@@ -69,51 +69,23 @@ end
 # This may mean repeatedly updating a variable as each condition is checked, so that 
 # the variable always contains the most precise result.
 
-# If the employee got their age right
-# correct_age = true 
-# # and is willing to eat garlic bread
-# garlic_preference = true
-# # or sign up for insurance,
-# insurance_preference = true
+
 	if correct_age = true && (garlic_preference == "y" || insurance_preference == "y")
-#the result is
 		puts "Probably not a vampire"
-
-# If the employee got their age wrong,
-# correct_age = false
-# # and hates garlic bread
-# garlic_preference == "n"
-# # or waives insurance,
-# insurance_preference == "n"
 	elsif correct_age = false && (garlic_preference == "n" || insurance_preference = "n")
-# the result is
 		puts "Probably a vampire"
-
-# If the employee got their age wrong, 
-# correct_age = false
-# hates garlic bread, 
-# garlic_preference = "n"
-# and doesn’t want insurance,
-# insurance_preference = "n" 
 	elsif correct_age = false && garlic_preference == "n" && insurance_preference == "n"
-#the result is 
 		puts "Almost certainly a vampire"
-
-# Even if the employee is an amazing liar otherwise, 
-# anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, 
-# because come on. 
 	elsif name == "Drake Cula" || "Tu Fang"
-# In that case, you should print
 		puts "Definitely a vampire"
-
-# Otherwise, print “Results inconclusive.”
 	else 
 		puts "Results inconclusive"
+# DEBUG: Getting last result...
 
 # Print the result at the end of the survey.
 
 puts "\nHere are the results of your interview questions:"
 puts "Name: #{name}"
-puts "Correct Age: #{correct_age}"
+puts "Age: #{age}; Year Born: #{year_born}, Computed Age: #{correct_age}"
 puts "Garlic preference: #{garlic_preference}"
 puts "Health Insurance preference: #{insurance_preference}"
