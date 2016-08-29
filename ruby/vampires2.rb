@@ -1,9 +1,15 @@
 #WEREWOLF Inc; new employee interview process
 
+puts "How many employees will we be processing today?"
+number_employees = gets.chomp.to_i
+
+index = 0
+while index < number_employees
+
 #REL 1: DATA GATHERING STAGE:
 #Ask new employees following questions:
 
-puts "What is your name?" # (Str)
+puts "\nWhat is your name?" # (Str)
 	name = gets.chomp.to_s
 
 puts "How old are you?" #(Int)
@@ -89,11 +95,16 @@ puts "Health Insurance preference: #{insurance_preference}"
 		#test ok
 	elsif (correct_age == false) && (garlic_preference == "n") && (insurance_preference == "n")
 		puts "Almost certainly a vampire"
-		#test FAILED; prints: Probably a vampire
+		#test FAILED; prints: Probably a vampire; running on 1st condition. not sure how 
+		# to check all
 	else 
 		puts "Results inconclusive"
 		#test ok: age=true;garlic=n;ins=n
 	end
+
+index += 1
+
+end
 
 
 # # DEBUG: all test ok except for "age=false && ga"	
