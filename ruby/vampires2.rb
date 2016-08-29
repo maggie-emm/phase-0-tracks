@@ -99,6 +99,8 @@ puts "Name: #{name}"
 puts "Age: #{age}; Year Born: #{year_born}, Computed Age: #{correct_age}"
 puts "Garlic preference: #{garlic_preference}"
 puts "Health Insurance preference: #{insurance_preference}"
+puts "Allergies: #{allergies}"
+#BUG: listing only last condition. research how to list all conditions specified 
 
 #put conditions in place
 	if name == "Drake Cula" || name == "Tu Fang"
