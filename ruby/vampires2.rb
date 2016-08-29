@@ -12,10 +12,10 @@ while index < number_employees
 puts "\nWhat is your name?" # (Str)
 	name = gets.chomp.to_s
 
-puts "How old are you?" #(Int)
+puts "\nHow old are you?" #(Int)
 	age = gets.chomp.to_i
 
-puts "What year were you born?" #(Int)
+puts "\nWhat year were you born?" #(Int)
 	year_born = gets.chomp.to_i
 
 current_year = Time.now.year
@@ -38,7 +38,7 @@ correct_age = current_year.to_i - year_born.to_i
 valid_input = false
 until valid_input
 
-puts "Would you like an order of garlic bread from the cafeteria? (y/n)"
+puts "\nWould you like an order of garlic bread from the cafeteria? (y/n)"
 	garlic_preference = gets.chomp.downcase
 
 	if garlic_preference == "y"
@@ -55,7 +55,7 @@ end
 valid_input = false
 until valid_input
 
-puts "Would you like to enroll in company's health insurance? (y/n)"
+puts "\nWould you like to enroll in company's health insurance? (y/n)"
 	insurance_preference = gets.chomp.downcase
 
 	if insurance_preference == "y"
@@ -71,12 +71,20 @@ end
 
 # employee should list any allergies
 # loop until "Done"
-#  - puts "Type "Done" when complete with your list"
-#  - if alergy = "" || alergy = "None" => N/A
 #  - if allergy = "Sunshine" >>> "Probably a vampire"
 
+puts "\nThe Department of WereWolf Health and Vessen Services requires that we maintain a list of your allergies."
 
+allergies = ""
+	until allergies == "done" || allergies == "sunshine"
+		puts "Please list any allergies you have. Type 'done' when complete with your list or if you have none."
+		allergies = gets.chomp.downcase
+	end
 
+	if allergies = "done"
+		puts "Thank you for your input"
+	end
+#BUG: gets "Prob vampire msg when type done"
 
 # Match the following conditions in the order they're listed. Your program should base 
 # its result on the latest condition matched, not the first condition matched. 
@@ -96,6 +104,8 @@ puts "Health Insurance preference: #{insurance_preference}"
 	if name == "Drake Cula" || name == "Tu Fang"
 		puts "Definitely a vampire"
 		#Test OK
+	elsif allergies = "sunshine"
+		puts "Probably a vampire"
 	elsif (correct_age == true) && (garlic_preference == "y" || insurance_preference == "y")
 		puts "Probably not a vampire"
 		#test ok
@@ -104,7 +114,7 @@ puts "Health Insurance preference: #{insurance_preference}"
 		#test ok
 	elsif (correct_age == false) && (garlic_preference == "n") && (insurance_preference == "n")
 		puts "Almost certainly a vampire"
-		#test FAILED; prints: Probably a vampire; running on 1st condition. not sure how 
+#BUG:	#test FAILED; prints: Probably a vampire; running on 1st condition. not sure how 
 		# to check all
 	else 
 		puts "Results inconclusive"
