@@ -3,7 +3,7 @@
 #REL 1: DATA GATHERING STAGE:
 #Ask new employees following questions:
 
-puts "What is you name?" # (Str)
+puts "What is your name?" # (Str)
 	name = gets.chomp
 
 puts "How old are you?" #(Int)
@@ -29,12 +29,12 @@ valid_input = false
 until valid_input
 
 puts "Would you like an order of garlic bread from the cafeteria? (y/n)"
-	galic_preference = gets.chomp.downcase
+	garlic_preference = gets.chomp.downcase
 
-	if galic_preference == "y"
+	if garlic_preference == "y"
 		valid_input = true
 		puts "Glad you like garlic. I do too!"
-	elsif galic_preference == "n"
+	elsif garlic_preference == "n"
 		valid_input = true
 		puts "So you're not a garlic fan? hmmm"
 	else
@@ -65,9 +65,53 @@ end
 # This may mean repeatedly updating a variable as each condition is checked, so that 
 # the variable always contains the most precise result.
 
-# If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
-# If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
-# If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
-# Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
+# If the employee got their age right
+# correct_age = true 
+# # and is willing to eat garlic bread
+# garlic_preference = true
+# # or sign up for insurance,
+# insurance_preference = true
+	if correct_age = true && (garlic_preference == "y" || insurance_preference == "y")
+#the result is
+		puts "Probably not a vampire"
+
+# If the employee got their age wrong,
+# correct_age = false
+# # and hates garlic bread
+# garlic_preference == "n"
+# # or waives insurance,
+# insurance_preference == "n"
+	elsif correct_age = false && (garlic_preference == "n" || insurance_preference = "n")
+# the result is
+		puts "Probably a vampire"
+
+# If the employee got their age wrong, 
+# correct_age = false
+# hates garlic bread, 
+# garlic_preference = "n"
+# and doesn’t want insurance,
+# insurance_preference = "n" 
+	elsif correct_age = false && garlic_preference == "n" && insurance_preference == "n"
+#the result is 
+		puts "Almost certainly a vampire"
+
+# Even if the employee is an amazing liar otherwise, 
+# anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, 
+# because come on. 
+	elsif name == "Drake Cula" || "Tu Fang"
+# In that case, you should print
+		puts "Definitely a vampire"
+
 # Otherwise, print “Results inconclusive.”
+	else 
+		puts "Results inconclusive"
+
 # Print the result at the end of the survey.
+
+puts "\nHere are the results of your interview questions:"
+puts "Name: #{name}"
+puts "Correct Age: #{correct_age}"
+puts "Garlic preference: #{garlic_preference}"
+puts "Health Insurance preference: #{insurance_preference}"
+
+
