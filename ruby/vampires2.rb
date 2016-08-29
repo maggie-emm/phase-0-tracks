@@ -106,6 +106,8 @@ index += 1
 
 end
 
+puts "\nActually, never mind!  What do these questions have to do with anything? Let's all be friends"
+
 
 # # DEBUG: all test ok except for "age=false && ga"	
 
