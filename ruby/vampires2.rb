@@ -1,4 +1,4 @@
-#WEREWOLF Inc; new employee interview process
+#WEREWOLF Inc; new employee interview process; TAG GLENNA FOR REVIEW
 
 puts "How many employees will we be processing today?"
 number_employees = gets.chomp.to_i
