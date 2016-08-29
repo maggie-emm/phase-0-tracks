@@ -69,6 +69,15 @@ puts "Would you like to enroll in company's health insurance? (y/n)"
 	end
 end
 
+# employee should list any allergies
+# loop until "Done"
+#  - puts "Type "Done" when complete with your list"
+#  - if alergy = "" || alergy = "None" => N/A
+#  - if allergy = "Sunshine" >>> "Probably a vampire"
+
+
+
+
 # Match the following conditions in the order they're listed. Your program should base 
 # its result on the latest condition matched, not the first condition matched. 
 # In other words, it's not a "only one condition will apply" sort of scenario. 
@@ -124,7 +133,7 @@ puts "\nActually, never mind!  What do these questions have to do with anything?
 # 		correct_age = false
 # 	end
 # p correct_age
-# garlic_preference = "y"
+# garlic_preference = "n"
 # p garlic_preference
 # insurance_preference = "n"
 # p insurance_preference
