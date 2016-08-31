@@ -3,11 +3,11 @@
 
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
-"iNvEsTiGaTiOn".swapcase
-"iNvEsTiGaTiOn".swapcase!
-#=> “InVeStIgAtIoN”
 
-"zom".insert(1, "o")
+ "iNvEsTiGaTiOn".swapcase
+ "iNvEsTiGaTiOn".swapcase!
+# => “InVeStIgAtIoN”
+
 "zom".insert(2, "o")
 #=> “zoom”
 
@@ -15,38 +15,42 @@
 # => "    enhance    "
 
 "Stop! You’re under arrest!".upcase
-"Stop! You’re under arrest!".upcase!
 # => "STOP! YOU’RE UNDER ARREST!"
 
-a = "the usual "
-a << "suspects"
-
-"the usual " + "suspects"
+"the usual" + " suspects"
+"the usual".concat(" suspects")
+a = "the usual"
+a << " suspects"
 #=> "the usual suspects"
 
-#" suspects".<???>
-a = " suspects"
-a.prepend "the usual"
-
+" suspects".prepend("the usual")
 " suspects".insert(0, "the usual")
 # => "the usual suspects"
+
+"The case of the disappearing last letter".chop
+# => "The case of the disappearing last lette"
+
+"The mystery of the missing first letter".slice(1..-1)
+# => "he mystery of the missing first letter"
+
+"Elementary,    my   dear        Watson!".squeeze
+# => "Elementary, my dear Watson!"
+
 
 "The case of the disappearing last letter".chomp("r")
 "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+
 a = "he mystery of the missing first letter"
 a.prepend "T"
 # => "he mystery of the missing first letter"
 
-"Elementary,    my   dear        Watson!".squeeze(" ")
-# => "Elementary, my dear Watson!"
 
 "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
-"122 is ASCII Code = z"
+# ascii dec code
 
 "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
