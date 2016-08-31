@@ -8,8 +8,8 @@
  "iNvEsTiGaTiOn".swapcase!
 # => “InVeStIgAtIoN”
 
-"zom".insert(1, 'o')
-# => “zoom”
+"zom".insert(2, "o")
+#=> “zoom”
 
 "enhance".center(15)
 # => "    enhance    "
@@ -17,6 +17,7 @@
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
+"the usual" + " suspects"
 "the usual".concat(" suspects")
 a = "the usual"
 a << " suspects"
@@ -35,9 +36,21 @@ a << " suspects"
 "Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
 
+
+"The case of the disappearing last letter".chomp("r")
+"The case of the disappearing last letter".chop
+# => "The case of the disappearing last lette"
+
+
+a = "he mystery of the missing first letter"
+a.prepend "T"
+# => "he mystery of the missing first letter"
+
+
 "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+# ascii dec code
 
-"How many times does the letter 'a' appear in this string?".count 'a'
+"How many times does the letter 'a' appear in this string?".count "a"
 # => 4
