@@ -19,7 +19,8 @@ p designer_application
 designer_application[:hired] = 'Never'
 p designer_application
 
-name = :name
+name = "Bouncing Bonnie"
+p designer_application[:name]
 p designer_application.keys
 
 designer_application[:name] + designer_application[:phone]
