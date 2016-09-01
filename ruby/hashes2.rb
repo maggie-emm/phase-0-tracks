@@ -39,6 +39,7 @@ while designer_intake.length <  do
 	designer_intake << input
 end
 
+#
 
 # Print the hash back out to the screen when the designer has answered all of the questions.
 
