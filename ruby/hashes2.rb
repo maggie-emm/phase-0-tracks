@@ -25,10 +25,19 @@ designer_intake = {
 	entertain_regularly: true
 }
 
-p designer_intake
+p designer_intake.keys
+p designer_intake.value
 
 
 # Convert any user input to the appropriate data type.
+
+while designer_intake.length <  do
+	puts "Enter the requested information (or type 'exit'):"
+	# p designer_intake.keys
+	input = gets.chomp
+	break if input == "exit"
+	designer_intake << input
+end
 
 
 # Print the hash back out to the screen when the designer has answered all of the questions.
