@@ -10,7 +10,14 @@ puts "\nPlease provide us the following information to better serve your needs a
 #create keys (symbols) :client's....:  name(str), age(int), children?(boolean) (y=#(int)), decor theme(str), 
 # budget range(int), # bedrooms(int), # bathrms(int), most_imp_room(str), least_imp_room(str), 
 # party animal?(boolean)
-designer_intake = {
+designer_intake 
+	puts "\nPlease provide us the following information to better serve your needs and desires."
+	client_info = gets.chomp.to_i
+	i = 0
+
+until i == client_info
+	puts
+= {
 	client_name: "John Doe",
 	partner_name: "Jane Doe",
 	client_age: 87,
