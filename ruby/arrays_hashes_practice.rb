@@ -36,7 +36,7 @@ p designer_application
 designer_application[:prev_employer] = "Back to the Future"
 p designer_application
 
-puts "***************************"
+"*"*50
 
 grades = {
 	name: "Jane Doe",
@@ -51,3 +51,5 @@ grades = {
 
 p grades
 p grades.keys
+
+"*"*50
