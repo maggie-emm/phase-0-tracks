@@ -83,7 +83,6 @@ def adult_intake
 	number_adults = gets.chomp.to_i
 	starting_number = 0
 	
-loop do	
 until starting_number == number_adults
 	puts "First name?"
 	first_name = gets.chomp.downcase
@@ -94,12 +93,16 @@ until starting_number == number_adults
 	puts "Age?"
 	age = gets.chomp.to_i
 end
-end
 
-p first_name
-p last_name
-p gender
-p age
+puts "This is the information we have on you. Type 'Return' if anything needs to be changed."
+"\n*"*40
+p "\nFirst name: #{first_name}"
+p "Last name: #{last_name}"
+p "Gender: #{gender}"
+p "Age: #{age}"
+
+starting_number = starting_number += 1
+
 end
 # designer_intake.each do |category, data|
 
