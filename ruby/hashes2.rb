@@ -1,11 +1,11 @@
 #pseudocode interior designer client intake form info
 
 #welcome and introduction:
-puts "Marvelous Melvin; Your Adorable Meshugana Designer"
+# puts "Marvelous Melvin; Your Adorable Meshugana Designer"
 
-# Prompt the designer/user for all of this information.
-puts "\nWe are delighted you chose us to design your dream home."
-puts "\nPlease provide us the following information to better serve your needs and desires."
+# # Prompt the designer/user for all of this information.
+# puts "\nWe are delighted you chose us to design your dream home."
+# puts "\nPlease provide us the following information to better serve your needs and desires."
 
 #create keys (symbols) :client's....:  name(str), age(int), children?(boolean) (y=#(int)), decor theme(str), 
 # budget range(int), # bedrooms(int), # bathrms(int), most_imp_room(str), least_imp_room(str), 
@@ -78,12 +78,12 @@ puts "\nPlease provide us the following information to better serve your needs a
 
 puts "Please enter the requested information or type 'exit'."
 	
-def adult_intake
-	puts "How many adults will we be getting information on today?"
-	number_adults = gets.chomp.to_i
-	starting_number = 0
+puts "How many adults will we be getting information on today?"
+number_adults = gets.chomp.to_i
+
+i = 0
 	
-until starting_number == number_adults
+while i < number_adults
 	puts "First name?"
 	first_name = gets.chomp.downcase
 	puts "Last name?"
@@ -101,9 +101,9 @@ p "Last name: #{last_name}"
 p "Gender: #{gender}"
 p "Age: #{age}"
 
-starting_number = starting_number += 1
+i = i += 1
 
-end
+
 # designer_intake.each do |category, data|
 
 	
