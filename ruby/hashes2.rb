@@ -10,41 +10,46 @@ puts "\nPlease provide us the following information to better serve your needs a
 #create keys (symbols) :client's....:  name(str), age(int), children?(boolean) (y=#(int)), decor theme(str), 
 # budget range(int), # bedrooms(int), # bathrms(int), most_imp_room(str), least_imp_room(str), 
 # party animal?(boolean)
-designer_intake 
-	puts "\nPlease provide us the following information to better serve your needs and desires."
-	client_info = gets.chomp.to_i
-	i = 0
-
-until i == client_info
-	puts
-= {
-	client_name: "John Doe",
-	partner_name: "Jane Doe",
-	client_age: 87,
-	partner_age: 24,
-	number_children: 7,
-	decor_theme: "Gaudy",
-	budget_range: 125000,
-	number_bedrooms: 10,
-	number_bathrooms: 5,
-	most_imp_room: "Master Bedroom",
-	least_imp_room: "Kitchen",
-	entertain_regularly: true
-}
-
-p designer_intake.keys
-p designer_intake.value
+# designer_intake = {
+# 	adults => {
+# 			last_name: "",
+# 			first_fname: "",
+# 			gender: "",
+# 			age: ""
+# 		}
+# 	end
+# end
+		
 
 
-# Convert any user input to the appropriate data type.
+# 	}
+# 	client_name: "",
+# 	partner_name: "",
+# 	client_age: ,
+# 	partner_age: ,
+# 	number_children: ,
+# 	decor_theme: "",
+# 	budget_range: ,
+# 	number_bedrooms: ,
+# 	number_bathrooms: ,
+# 	most_imp_room: "",
+# 	least_imp_room: "",
+# 	entertain_regularly: 
+# }
 
-while designer_intake.length <  do
-	puts "Enter the requested information (or type 'exit'):"
-	# p designer_intake.keys
-	input = gets.chomp
-	break if input == "exit"
-	designer_intake << input
-end
+# p designer_intake.keys
+# p designer_intake.value
+
+
+# # Convert any user input to the appropriate data type.
+
+# while designer_intake.length <  do
+# 	puts "Enter the requested information (or type 'exit'):"
+# 	# p designer_intake.keys
+# 	input = gets.chomp
+# 	break if input == "exit"
+# 	designer_intake << input
+# end
 
 #
 
@@ -62,7 +67,49 @@ end
 
 # Print the latest version of the hash, and exit the program.
 
+# designer_intake = {
+# 	# adults = {
+# 			last_name: "",
+# 			first_name: "",
+# 			gender: "",
+# 			age: ""
+# 	# }
+# }
 
+puts "Please enter the requested information or type 'exit'."
+	
+def adult_intake
+	puts "How many adults will we be getting information on today?"
+	number_adults = gets.chomp.to_i
+	starting_number = 0
+	
+loop do	
+until starting_number == number_adults
+	puts "First name?"
+	first_name = gets.chomp.downcase
+	puts "Last name?"
+	last_name = gets.chomp.downcase
+	puts "Gender?"
+	gender = gets.chomp.downcase
+	puts "Age?"
+	age = gets.chomp.to_i
+end
+end
+
+p first_name
+p last_name
+p gender
+p age
+end
+# designer_intake.each do |category, data|
+
+	
+
+# while number_adults
+# 	input = gets.chomp
+# 	break if input = 'exit'
+# 	adults << input
+# end
 
 
 # Be sure to pseudocode, and leave your pseudocode in as comments.
