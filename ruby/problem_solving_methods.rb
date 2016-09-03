@@ -7,25 +7,25 @@
 #if number is there we need to return the index
 # if it's not there retur nill
 
-######## GOOD CODE START ##################
-#  def search(array, num)
-#  	i = 0
-# 	while i <= array.length do
+######## GOOD CODE: START ##################
+ def search(array, num)
+ 	i = 0
+	while i <= array.length do
 
-#     if array[i] == num
-#     		# puts "#{num} is in this array and is indexed at #{i}"
-#             # return num
-#             return i
-#     elsif i == array.length-1
-#     		# puts "#{num} is not in this array"
-#             return nil
-#     else
-#     i+=1
-# 	end
-#  end
-# end
+    if array[i] == num
+    		# puts "#{num} is in this array and is indexed at #{i}"
+            # return num
+            return i
+    elsif i == array.length-1
+    		# puts "#{num} is not in this array"
+            return nil
+    else
+    i+=1
+	end
+ end
+end
 
-#  a = [66, 89, 23, 1]
+ a = [66, 89, 23, 1]
 #  p search(a, 23)
  ########### GOOD CODE END #############
 
@@ -99,17 +99,17 @@
 # return a new array
 # push them inside until the lenght of the array equals the desired length 
 ###### GOOD CODE START ########
-# def fibonacci(random)
-# 	start = [0,1]
-# 	(random -2).times do |i|
-#     start << (start[-1] + start[-2])
-# end
-# return start
-# end
+def fibonacci(random)
+	start = [0,1]
+	(random -2).times do |i|
+    start << (start[-1] + start[-2])
+end
+return start
+end
 
-# p fibonacci(6)
+p fibonacci(6)
 
-# p fibonacci(100)[-1]==218922995834555169026
+p fibonacci(100)[-1]==218922995834555169026
 ########### GOOD CODE END ##############
 
 # def fib()
@@ -125,6 +125,8 @@
 #an entire list:
 # - sort 2 adjacent numb, swap them so they are in descending order,
 # - loop thru array, swap ea pair of numbers, until entire list is ordered
+
+############### GOOD CODE START ################
 def bubble_sort(list)
   return list if list.size <= 1
 
@@ -141,8 +143,26 @@ def bubble_sort(list)
 	list
 end
 
-array = [65,22,22,15,99]
+array = [65,22,24,15,99,38,76]
 bubble_sort array
+p array
+
+####### ANOTHER APPROACH ############# 
+def insertion_sort(arr)
+	(1..arr.length-1).each do |i|
+    inserting = arr.delete_at(i)
+
+    index = i
+    index -= 1 while index >0 && inserting < arr[index -1]	
+
+    arr.insert(index, inserting)
+end
+arr
+end
+
+check_array = [3, 5, 7,3 ,2 ,1 , 77, 32, 4]
+
+p insertion_sort(check_array)
 
 
 ############ DEBUG ################
