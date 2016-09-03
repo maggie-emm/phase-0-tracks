@@ -25,8 +25,8 @@
  end
 end
 
- a = [66, 89, 23, 1]
-#  p search(a, 23)
+a = [66, 89, 23, 1]
+p search(a, 23)
  ########### GOOD CODE END #############
 
  #>>>>>>>>>> DEBUG >>>>>>>>>>>> included = index(0-not actual index) &
