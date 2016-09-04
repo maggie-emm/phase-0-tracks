@@ -1,3 +1,4 @@
+#from trng vid
 house = {
 	'Living Room' => [
 		'sofa',
@@ -10,3 +11,4 @@ house = {
 }
 
 house['Kitchen']
+
