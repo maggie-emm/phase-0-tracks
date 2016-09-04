@@ -81,9 +81,11 @@ puts "Please enter the requested information or type 'exit'."
 puts "How many adults will we be getting information on today?"
 number_adults = gets.chomp.to_i
 
+# def designer_intake()
 i = 0
-	
-while i < number_adults
+
+# loop do	
+  while i < number_adults
 	puts "First name?"
 	first_name = gets.chomp.downcase
 	puts "Last name?"
@@ -92,7 +94,7 @@ while i < number_adults
 	gender = gets.chomp.downcase
 	puts "Age?"
 	age = gets.chomp.to_i
-end
+  end
 
 puts "This is the information we have on you. Type 'Return' if anything needs to be changed."
 "\n*"*40
@@ -101,7 +103,7 @@ p "Last name: #{last_name}"
 p "Gender: #{gender}"
 p "Age: #{age}"
 
-i = i += 1
+i += 1
 
 
 # designer_intake.each do |category, data|
@@ -116,3 +118,24 @@ i = i += 1
 
 
 # Be sure to pseudocode, and leave your pseudocode in as comments.
+
+def designer_questionnaire
+	puts "Please provide the following information so that we can provide you with the interior design for your home that your love to live in."
+	puts "What is your name?"
+		name = gets.chomp
+		
+designer_intake = {
+	name: "Maggie Dorsey",
+	address: "5 123 Way",
+	number_children: 5,
+	email: "md@md.me",
+	phone: "510-555-1212",
+	fav_shade_blue: "Indigo",
+	wallpaper_preference: "Paisley",
+	ombre: "So last season",
+	decor_theme: "Country"
+}
+
+designer_intake.each {|key, value| puts "#{key}:  #{value}"}
+
+end
