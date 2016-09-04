@@ -21,19 +21,23 @@ puts "Single or Partnered? (s/p)"
 	client_info[:living_status] = gets.chomp
 	if client_info[:living_status] == "s"
 		client_info[:living_status] = true
-			puts "single"
+			puts "Single"
 	else client_info[:living_status] = false
-			puts "partnered"
+			puts "Partnered"
 	end
 puts "Any Children? (y/n)"
 	client_info[:children] = gets.chomp
+	valid_input = false
 	if client_info[:children] == "y"
 		client_info[:children] = true
 			puts "How many?"
 				client_info[:numb_children] = gets.chomp.to_i
-	else client_info[:children] = false
+	elsif client_info[:children] = true
 			puts "No Children"
+	else
+		puts "Please respond with 's' or 'p' "
 	end
+
 puts "Any Pets? (y/n)"
 	client_info[:pets] = gets.chomp
 	if client_info[:pets] == "y"
