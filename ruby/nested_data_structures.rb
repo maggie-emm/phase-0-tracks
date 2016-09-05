@@ -54,3 +54,5 @@ p bicycles[:trek]
 p bicycles[:fisher][:frame_types].push('steel')
 p bicycles[:raleigh][:price_range][:high]
 p bicycles[:colnago][:frame_types][2]= 'Titanium'
+p bicycles[:raleigh][:country_manufactured]
+p bicycles.each{|key, value| puts "#{key}: #{value}"}
