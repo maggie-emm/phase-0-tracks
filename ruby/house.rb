@@ -1,12 +1,14 @@
 house = {
-	'Living Room' => [
+	living_room: [
 		'sofa',
 		'lamp'
-		]
-	'Kitchen' => [
+		],
+	kitchen: [
 		'table',
-		'refrig']
-	'Atic': []
+		'refrig'
+		],
+	attic: []
 }
 
-house['Kitchen']
+p house[:kitchen]
+
