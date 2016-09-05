@@ -1,6 +1,7 @@
 #input real name 
 
-puts "Welcome to Kre8-a-name, trusted by spy's around the globe.\rPlease enter the first name you want disguised."
+puts "Welcome to Kre8-a-name, trusted by spy's around the globe."
+puts "Please enter the first name you want disguised."
 
 #def vowel/consonant
 vowels = "aeiou".chars
