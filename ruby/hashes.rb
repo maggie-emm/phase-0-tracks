@@ -7,7 +7,9 @@ puts "Greetings Designer. Please provide me with your name."
 	designer_name = gets.chomp
 puts "Welcome back, #{designer_name}. \n\rPlease enter your client's information in the field provided.\n\r"
 
-# #ask designer questions & allow response; store response as appropriate data type
+#ask designer questions & allow response; store response as 
+#ppropriate data type
+
 client_info = {}
 
 def client_name 

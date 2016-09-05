@@ -1,3 +1,5 @@
+# REWORK AFTER Submitting old hash.rb"
+
 #pseudocode interior designer client intake form info
 
 #welcome and introduction:
