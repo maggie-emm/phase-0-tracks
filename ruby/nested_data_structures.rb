@@ -1,4 +1,4 @@
-#design nested data structure
+#design nested data structure of bicycles:
 bicycles = {
     colnago: {
         country_manufactured: 'Italy',
