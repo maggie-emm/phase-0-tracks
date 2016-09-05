@@ -3,26 +3,39 @@ Answer each question briefly -- we're checking your knowledge, not your essay sk
 Data Structures
 1. Why are data structures useful in programming?
 
-Data structures help to organize data types like integers & strings. Data structures help to store individual pieces of information, so they are helpful in accomplishing the DRY principle.
-
-Data structures in Ruby can hold strings, integers, and any other Ruby object you're likely to use. They can even hold more data structures! After all, in keeping with the "everything is an object" philosophy of Ruby, data structures themselves are just objects as well. 
+Data structures help to organize data types like integers & strings. They help to store individual pieces of information, so they are helpful in accomplishing the DRY principle.
 
 Arrays
 2. Define "array" and describe the characteristics of an array.
 
+Arrays are used to set up lists or groups of things that are similar. They use [] to contain them, "str" use quotes-single or double, 5 int-no quotes are simply listed. All items in arr are sep by ",". A formatted array might look like this:   arr = ["a", 5, "b", 10]
+
 3. Give two original examples of data sets that an array might be well-suited for.
+planting_seeds = ["cucumber", "radish", "thyme", "strawberry"]
+sep_dates = [1..30]
 
 Hashes
 4. Define "hash" and describe the characteristics of a hash.
+The structure for labeled data. It uses a key, value pair. That is some category (key) with its associated data (value). Hashes can be nested (have either another hash or an array within it). It is formatted using {}. The key can be identified as a "str" => "data", or 2 diff formats for symbols: :number => 5, or number: 5
 
 5. Give two original examples of data sets that a hash might be well-suited for.
+doc_appts = {
+	sep: [4, 15, 28],
+	oct: "first"
+}
+
+pets = {dogs: ["Pugs", "Trigger"], cat: "Missy"}
 
 Iteration
 6. Why is iteration useful?
+Allows programmer to repeatedly execute the same routine on a block of code without having to rewrite it each time (DRY principle). This reduces potential coding errors due to less code.
 
 7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+Making a salad = iterating a block of data: 5 salad ingredients. Retrieving ingredient 1..5, then washing 1..5, cutting 1..5, placing in salad 1..5
 
 Blocks
 8. What is a block?
+1 or more lines of code that is its own mini-program that you may want to execute repeatedly.  Similar to a method but different syntax.
 
 9. What is a block parameter, and where does its value come from?
+Block parameter is set by the programmer (you get to make it up based on whatever your lil heart desires). It is contained within || much like an argument in contained within () in a method. Its value will be determined on the code being executing in the block (.each=iteration, .upcase=all caps, etc.).
