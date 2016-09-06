@@ -1,6 +1,20 @@
 #code from slack to investigate as to its value
 #rework
 
+#>>>>>>>>>>>> Loop >>>>>>>>>>>>>>>>>
+number = []
+loop do
+puts "Give me a number..to stop please type 'done'"
+given_number=gets.chomp 
+
+number << given_number
+break if given_number == "done"
+
+end
+#optional
+p number
+#>>>>>>>>>>>>>>>> End Loop >>>>>>>>>>>
+
 client_info = []
 
 puts 'What is your name?"
