@@ -57,10 +57,12 @@
 
 # Method to print a list and make it look pretty
 	def print_list(item_name, quantity, groc_list)
-		groc_list.each {|key, value| puts "#{item_name} buy #{quantity}"}
-		puts "*" * 50
+		# groc_list.each {|key, value| puts "#{item_name} buy #{quantity}"}
+		# puts "*" * 50
+		groc_list[item_name][quantity]
 		groc_list
 	end
+
 # input: puts stmnt that this is final list
 # steps: "*"*50 to sep and identify new list below
 # output: p key, value pair in hash
@@ -75,6 +77,11 @@ p add_item("onion", 1, groc_list)
 p add_item("ice cream", 4, groc_list)
 p delete_item("broccoli", groc_list)
 p update_quantity("bananas", 7, groc_list)
+p ("*" * 27) + "Current Grocery List" + ("*" * 27)
+p groc_list
+p "*" * 75
+# groc_list.each {|key, value| puts "#{item_name} buy #{quantity}" }
+# p groc_list[item_name][quantity]
 
 #*************************** REFLECT ***********************************
 # What did you learn about pseudocode from working on this challenge?
