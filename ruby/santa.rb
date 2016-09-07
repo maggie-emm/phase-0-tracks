@@ -13,6 +13,20 @@ class Santa
 #        prints: "That was a good <type of cookie here>!" 
 #  - initialize: prints: "Initializing Santa instance ...".
 
+# REL 1> Give Santa Attributes
+#   - gender & ethnicity on initialization
+#   - reindeer_ranking, an array of reindeer from most preferred to least preferred	
+#       - not passed in initialization: default value: ["Rudolph", "Dasher", "Dancer", 
+#                        "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+#   - age: not passed in initalization: default: 0
+
+
+	def initialize(gender, ethnicity)
+		puts "Initializing Santa instance ..."
+		@gender = gender
+		@ethnicity = ethnicity
+	end
+
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
@@ -21,15 +35,16 @@ class Santa
 		puts "That was a good #{cookie_type} cookie!" 
 	end
 
-	def initialize
-		puts "Initializing Santa instance ..."
-	end
-
 end
 
-test_santa = Santa.new
-test_santa.speak
-test_santa.eat_milk_and_cookies("gingerbread")
+# DRIVER CODE:
+santa = Santa.new
+santa.speak
+santa.eat_milk_and_cookies("gingerbread")
+
+# test_santa = Santa.new
+# test_santa.speak
+# test_santa.eat_milk_and_cookies("gingerbread")
 
 
 
