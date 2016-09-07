@@ -1,0 +1,21 @@
+kitchen
+bathroom
+bedroom
+living room
+office
+done
+2
+bed
+3
+couch
+1
+toilet
+4
+desk
+1
+mirror
+2
+lamp
+3
+tv
+done

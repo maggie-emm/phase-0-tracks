@@ -279,6 +279,32 @@ end
 
 # #how to get to kitchen?>>>    house['Kitchen']
 
+# 	living_room: [
+# 		'sofa',
+# 		'lamp'
+# <<<<<<< HEAD
+# 		],
+# 	kitchen: [
+# 		'table',
+# 		'refrig'
+# 		],
+# 	attic: []
+# }
+
+# p house[:kitchen]
+
+# =======
+# 		]
+# 	:kitchen => [
+# 		'table',
+# 		'refrig'
+# 	]
+# 	attic: []
+# }
+
+# #how to get to kitchen?>>>  	house['Kitchen']
+
+
 # #methods to call on kitch?>>>   array methods
 
 # #how get refrig>>>>>>>>>>       house['Kitchen'][1] >>> 
@@ -374,3 +400,4 @@ end
 # How would you lowercase the pretty name of one of the classes?
 
 # Add a line of code that does that here.
+
