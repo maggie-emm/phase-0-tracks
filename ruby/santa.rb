@@ -1,5 +1,50 @@
 ############## NEW STUFF ###########################
 
+# Define Santa Class:
+# Add tester code to check intialize class & call methods
+# Create 3 Instance Methods:
+#  - speak: print "Ho, ho, ho! Haaaappy holidays!"
+#  - eat_milk_and_cookies: takes cookie type as a paramenter(gingerbread) and
+#        prints: "That was a good <type of cookie here>!" 
+#  - initialize: prints: "Initializing Santa instance ...".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
