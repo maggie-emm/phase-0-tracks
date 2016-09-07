@@ -60,7 +60,7 @@ p fish_array
 counter = 0
 
 # Created just 2 instances for testing purposes.
-until counter == 2
+until counter == 50
   new_name = Fish.new
   fish_array << new_name
   counter += 1
@@ -77,6 +77,7 @@ end
 nemo = Fish.new
 nemo.swim(8)
 nemo.eat('anchovies')
+
 
 
 
