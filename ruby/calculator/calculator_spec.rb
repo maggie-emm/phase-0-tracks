@@ -28,4 +28,9 @@ describe Calculator do
     calculator = Calculator.new
     expect(calculator.multiply(2,3)).to eq 6
   end
+
+  it "divides two integers" do
+    calculator = Calculator.new
+    expect(calculator.divide(9,3)).to eq 3
+  end
 end
