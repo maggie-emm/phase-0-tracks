@@ -13,6 +13,23 @@ class Santa
 #        prints: "That was a good <type of cookie here>!" 
 #  - initialize: prints: "Initializing Santa instance ...".
 
+# REL 1> Give Santa Attributes
+#   - gender & ethnicity on initialization
+#   - reindeer_ranking, an array of reindeer from most preferred to least preferred	
+#       - not passed in initialization: default value: ["Rudolph", "Dasher", "Dancer", 
+#                        "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+#   - age: not passed in initalization: default: 0
+
+
+	def initialize(gender, ethnicity)
+		puts "Initializing Santa instance ..."
+		# @name - name
+		@gender = gender
+		@ethnicity = ethnicity
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = age
+	end
+
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
@@ -21,15 +38,46 @@ class Santa
 		puts "That was a good #{cookie_type} cookie!" 
 	end
 
-	def initialize
-		puts "Initializing Santa instance ..."
+	# def reindeer_ranking
+	# 	@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+	# end
+
+	# def age(age)
+	# 	@age = age
+	# end
+
+	def about
+		# puts "Name: #{@name}"
+		puts "Age: #{@age}"
+		puts "Gender: #{@gender}"
+		puts "Ethnicity: #{@ethnicity}"
+		# puts "Reindeer assignment: #{@reindeer_ranking}"
 	end
 
 end
 
-test_santa = Santa.new
-test_santa.speak
-test_santa.eat_milk_and_cookies("gingerbread")
+# DRIVER CODE:
+#REL 0:
+santa1 = Santa.new("gender", "ethnicity")
+santa1.about
+santa1.speak
+santa1.eat_milk_and_cookies("gingerbread")
+
+#REL 1:
+santas = []
+
+santa1.reindeer_ranking
+santa1.gender("Bois")
+santa1.ethnicity("Undeclared")
+santa1.age(105)
+santa1.about
+
+gender_possible = ["male", "female", "lesbian", "gay", "transgender", "questionning", "bois", "unsure"]
+ethnicity_possible = ["asian", "black", "hispanic", "indigenous peoples", "south pacific islander", "white"]
+
+# test_santa = Santa.new
+# test_santa.speak
+# test_santa.eat_milk_and_cookies("gingerbread")
 
 
 
