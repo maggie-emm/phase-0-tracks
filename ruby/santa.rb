@@ -23,8 +23,11 @@ class Santa
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
+		# @name - name
 		@gender = gender
 		@ethnicity = ethnicity
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = age
 	end
 
 	def speak
@@ -35,12 +38,42 @@ class Santa
 		puts "That was a good #{cookie_type} cookie!" 
 	end
 
+	# def reindeer_ranking
+	# 	@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+	# end
+
+	# def age(age)
+	# 	@age = age
+	# end
+
+	def about
+		# puts "Name: #{@name}"
+		puts "Age: #{@age}"
+		puts "Gender: #{@gender}"
+		puts "Ethnicity: #{@ethnicity}"
+		# puts "Reindeer assignment: #{@reindeer_ranking}"
+	end
+
 end
 
 # DRIVER CODE:
-santa = Santa.new
-santa.speak
-santa.eat_milk_and_cookies("gingerbread")
+#REL 0:
+santa1 = Santa.new("gender", "ethnicity")
+santa1.about
+santa1.speak
+santa1.eat_milk_and_cookies("gingerbread")
+
+#REL 1:
+santas = []
+
+santa1.reindeer_ranking
+santa1.gender("Bois")
+santa1.ethnicity("Undeclared")
+santa1.age(105)
+santa1.about
+
+gender_possible = ["male", "female", "lesbian", "gay", "transgender", "questionning", "bois", "unsure"]
+ethnicity_possible = ["asian", "black", "hispanic", "indigenous peoples", "south pacific islander", "white"]
 
 # test_santa = Santa.new
 # test_santa.speak
