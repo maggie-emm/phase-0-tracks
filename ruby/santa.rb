@@ -22,7 +22,7 @@ class Santa
 	end
 
 	def initialize
-		puts "Initializing Santa instance ...".
+		puts "Initializing Santa instance ..."
 	end
 
 end
