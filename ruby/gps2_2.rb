@@ -57,9 +57,10 @@
 
 # Method to print a list and make it look pretty
 	def print_list(item_name, quantity, groc_list)
-		# groc_list.each {|key, value| puts "#{item_name} buy #{quantity}"}
-		# puts "*" * 50
-		groc_list[item_name][quantity]
+		groc_list.each do |item_name, quantity|
+			puts "#{item_name}: #{quantity}"
+			groc_list[item_name][quantity]
+		end
 		groc_list
 	end
 
@@ -77,15 +78,17 @@ p add_item("onion", 1, groc_list)
 p add_item("ice cream", 4, groc_list)
 p delete_item("broccoli", groc_list)
 p update_quantity("bananas", 7, groc_list)
-p ("*" * 27) + "Current Grocery List" + ("*" * 27)
+p ("*" * 10) + "Current Grocery List" + ("*" * 10)
 p groc_list
-p "*" * 75
+p "*" * 40
 # groc_list.each {|key, value| puts "#{item_name} buy #{quantity}" }
 # p groc_list[item_name][quantity]
 
 #*************************** REFLECT ***********************************
 # What did you learn about pseudocode from working on this challenge?
-#
+# I learned how mush easier it is to focus when the pseudocode identifies
+#     action to take. It really helped to illustrate the importantance of
+#     identifying the parameters 
 
 # What are the tradeoffs of using arrays and hashes for this challenge?
 #
