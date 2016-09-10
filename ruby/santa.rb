@@ -41,43 +41,62 @@ class Santa
 	def reindeer_ranking(reindeer_order)
 		@reindeer_ranking = reindeer_order
 	end
+#setter method
+	def gender
+		@gender
+	end
+#end setter method
+#getter methods
+	def age
+		@age
+	end
 
-	def age(age)
-		@age = age
+	def ethnicity
+		@ethnicity
+	end
+
+	def name
+		@name
+	end
+#end getter methods
+	def celebrate_birthday(age)
+		@age +=1
+		p celebrate_birthday
 	end
 
 	def about
+		puts "Name: #{@name}"
 		puts "Age: #{@age}"
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
 		puts "Reindeer assignment: #{@reindeer_ranking}"
 	end
-
 end
 
-santas = []
-names = ["Jack", "Jill"]
-gender = ["Thing1", "Thing2"]
-ethnicity = ["Male", "Female"]
-# DRIVER CODE:
+# santas = []
+# names = ["Jack", "Jill", "Frank", "Nick", "Bob", "Billie", "Sunshine"]
+# gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-puts "Iterating through Available Santa list..."
+#DRIVER CODE:
 
-names.each do |name|
-	santa_gender = gender.sample
-	santa_ethnicity = ethnicity.sample
-	puts "Available Santa details: #{name}, #{santa_gender}, #{santa_ethnicity}"
-	santas << Santa.new(name, santa_gender, santa_ethnicity)
-	puts "There are now #{santas.length} santas on the Available Santa list."
-	puts "======"
-end
+# puts "Iterating through Available Santa list..."
 
-
-
+# names.each do |name|
+# 	santa_gender = gender.sample
+# 	santa_ethnicity = ethnicity.sample
+# 	puts "Available Santa details: #{name}, #{santa_gender}, #{santa_ethnicity}"
+# 	santas << Santa.new(name, santa_gender, santa_ethnicity)
+# 	puts "There are now #{santas.length} santas on the Available Santa list."
+# 	puts "======"
+# end
 
 
 
-# santa = Santa.new("Bois", "First Peoples")
+
+
+
+# santa = Santa.new("Jack", "Bois", "First Peoples")
 # santa.about
 # santa.speak
 # santa.eat_milk_and_cookies("gingerbread")
