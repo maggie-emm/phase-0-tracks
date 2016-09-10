@@ -21,9 +21,9 @@ class Santa
 #   - age: not passed in initalization: default: 0
 
 
-	def initialize(gender, ethnicity)
+	def initialize(name, gender, ethnicity)
 		puts "Initializing Santa instance ..."
-		# @name - name
+		@name = name
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = reindeer_ranking(["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"])
@@ -47,7 +47,6 @@ class Santa
 	end
 
 	def about
-		# puts "Name: #{@name}"
 		puts "Age: #{@age}"
 		puts "Gender: #{@gender}"
 		puts "Ethnicity: #{@ethnicity}"
@@ -56,14 +55,35 @@ class Santa
 
 end
 
+santas = []
+names = ["Jack", "Jill"]
+gender = ["Thing1", "Thing2"]
+ethnicity = ["Male", "Female"]
 # DRIVER CODE:
-santa = Santa.new("Bois", "First Peoples")
-santa.about
-santa.speak
-santa.eat_milk_and_cookies("gingerbread")
-p @reindeer_ranking
-santa.age(105)
-santa.about
+
+puts "Iterating through Available Santa list..."
+
+names.each do |name|
+	santa_gender = gender.sample
+	santa_ethnicity = ethnicity.sample
+	puts "Available Santa details: #{name}, #{santa_gender}, #{santa_ethnicity}"
+	santas << Santa.new(name, santa_gender, santa_ethnicity)
+	puts "There are now #{santas.length} santas on the Available Santa list."
+	puts "======"
+end
+
+
+
+
+
+
+# santa = Santa.new("Bois", "First Peoples")
+# santa.about
+# santa.speak
+# santa.eat_milk_and_cookies("gingerbread")
+# p @reindeer_ranking
+# santa.age(105)
+# santa.about
 
 
 
