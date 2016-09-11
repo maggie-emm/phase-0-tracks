@@ -26,8 +26,8 @@ class Santa
 		@name = name
 		@gender = gender
 		@ethnicity = ethnicity
-		@reindeer_ranking = reindeer_ranking(["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"])
-		@age = age(0)
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 	end
 
 	def speak
@@ -38,9 +38,6 @@ class Santa
 		puts "That was a good #{cookie_type} cookie!" 
 	end
 
-	def reindeer_ranking(reindeer_order)
-		@reindeer_ranking = reindeer_order
-	end
 #setter method
 	def gender
 		@gender
@@ -61,8 +58,10 @@ class Santa
 #end getter methods
 	def celebrate_birthday(age)
 		@age +=1
-		p celebrate_birthday
 	end
+
+	def get_mad_at(reindeer_name)
+		reindeer_name << reindeer_ranking.last
 
 	def about
 		puts "Name: #{@name}"
