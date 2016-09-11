@@ -7,7 +7,7 @@ class Santa       #define class
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = rand(0..140)
+		@age = 0
 	end
 #Rel 1
 	def speak
@@ -47,6 +47,25 @@ class Santa       #define class
 		puts "Ethnicity: #{@ethnicity}"
 	end
 end
+
+#Driver Code Rel4
+puts "How many Santas would you like to check in?"
+checkin = gets.chomp.to_i
+
+gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+counter = 0
+
+new_checkin = []
+
+until counter == checkin
+	new_checkin = Santa.new(gender.sample, ethnicity.sample)
+	new_checkin.age
+	new_checkin.about
+		counter =+1
+end
+
 
 
 #DRIVER CODE:
