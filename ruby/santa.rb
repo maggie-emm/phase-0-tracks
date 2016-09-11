@@ -7,7 +7,7 @@ class Santa       #define class
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = rand(0..140)
 	end
 #Rel 1
 	def speak
@@ -48,25 +48,61 @@ class Santa       #define class
 	end
 end
 
-#Driver Code Rel4
-puts "How many Santas would you like to check in?"
-checkin = gets.chomp.to_i
+#Rel4:
+# santas = []
+# santa = Santa.new(@gender, @ethnicity)
+# santa.about
+# santa.speak
+# santa.eat_milk_and_cookies("Gingersnap")
 
-gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-counter = 0
+#### PRINT!!!!! YEAH!! ######
 
-new_checkin = []
-
-until counter == checkin
-	new_checkin = Santa.new(gender.sample, ethnicity.sample)
-	new_checkin.age
-	new_checkin.about
-		counter =+1
+def checkin_santas(num)
+	new_checkin = []
+	gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+	ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+	num.times do |i|
+		puts "Santas, check-in here: "
+		new_checkin << Santa.new(gender.sample, ethnicity.sample)
+		puts "You are Santa number #{new_checkin.length}."
+	end
+	new_checkin
+end
+print_new_checkin = checkin_santas(4)
+print_new_checkin.each_with_index do |santa, i|
+	puts "Santa #{i+1} is a #{santa.ethnicity} #{santa.gender} who is #{santa.age} years old"
 end
 
+### DEBUG -------- counter & age
+# 	def santas(santas_list)
+# 		counter = 1
+# 		santas = []
+# 		santas_list.times do |santa|
+# 			gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# 			ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# 		santa = Santa.new(gender.sample, ethnicity.sample
+# 		rand_age = age (140)
+# 		puts "Santa #{counter} is a #{santa.ethnicity} #{santa.gender} who is #{santa.age} years old"
+# 		puts "Santa's current reindeer preference is:"
+# 		p santa.reindeer_ranking
+# 		counter += 1
+# 	end
+# end
 
+# santas(3)
+
+#DEBUG ----- LOOP
+# counter = 0
+
+# checkin = gets.chomp.to_i
+
+# until counter == checkin
+# 	new_checkin = Santa.new(gender.sample, ethnicity.sample)
+# 	new_checkin.age
+# 	new_checkin.about
+# 		counter =+1
+# end
 
 #DRIVER CODE:
 # santa = Santa.new("Jack", "agender", "black")
