@@ -3,11 +3,18 @@
 # - user1 writes a word & 
 # - user2 tries to guess it.
 # - user2 gets a "YEAH" message if guessed correctly & 
-#                "!YEAH" if incorrect
+#                "Too Bad" if incorrect
 # SPECS:
 # 	1) 1st user enters a word
-# 		A) ask user1 to write a word......................USER INTERFACE
-# 		  I) length of word is determined.................BUS LOGIC: METHOD .length.to_i
+# 		A) ask user1 to write a word......................USER INTERFACE: puts & gets.chomp
+# 		  I) what to do with that word: determine ........BUS LOGIC: METHOD steps>ARR?
+#  						- length:  				.length.to_i
+#   					- split by ea char		.each_char
+#   														WHAT IF A HASH???
+#  			magic_word = gets.chomp
+#  			magic_word >> {letter: index}   ?? string.hash   
+#  			convert keys from "l" to " - "  ?? string.gsub{|l, _ |}
+#   		
 # 		B) based on # letters in word, _ is returned for each letter to signify 
 #  					# letters.............................BUS LOGIC: METHOD str = .split(' ')
 #  																
