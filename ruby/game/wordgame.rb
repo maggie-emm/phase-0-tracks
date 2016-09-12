@@ -71,11 +71,11 @@ class Wordgame
 		end
 	end
 
-	def about
-		puts "Magic_Word: #{@word}"
-		puts "Magic_Word length: #{@length}"
-		puts "Letter Guess: "
-	end
+	# def about
+	# 	puts "Magic_Word: #{@word}"
+	# 	puts "Magic_Word length: #{@length}"
+	# 	puts "Letter Guess: "
+	# end
 end
 
 # USER INTERFACE:
