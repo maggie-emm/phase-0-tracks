@@ -1,9 +1,10 @@
 require_relative 'wordgame'
 
-describe
-	let
+describe Wordgame do
+	let(: ) {Wordgame.new()}
 
-	it
+	it ""
+		game.magic_word()
 	end
 
 	it
