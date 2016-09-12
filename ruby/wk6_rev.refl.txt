@@ -1,0 +1,32 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+
+Our training this week drew the correlation between a class and a species, making the point quite well that a species of something (Eyelashus Adorableus) is not to be confused with one certain and individual member of that species (class) like the spider itself. Classes (species) include instructions for both attributes (see explanation below), and behavior, which are called methods in Ruby. Each member of a Ruby class is known as an instance of that class (like Maggie is a member or instance of Coyote Cohort or class). Once you have defined a class in Ruby, you can make as many instances of it as you'd like. Instance variables have @ in front of the variable name and allow the program to call that variable outside of the method. Instance methods are methods you define and call on methods as opposed to class methods which you call on a class.
+
+x class
+x state
+x behavior
+x instance variable
+x instance method
+
+2. What are attributes?
+
+Attributes are like characteristics or the state of something. As in our santa exercise, the gender, ethnicity, age of santa
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+
+Class: Dog; Attributes represent characteristics not behavior; therefore, attributes might include: :fur_length, :fur_color, :size, tail_shape; :height, :weight, etc
+
+4. What is the purpose of the initialize method? When does it run?
+
+Whenever Ruby creates a new object, it looks for a method named initialize and executes it. So one simple thing we can do is use an initialize method to put default values into all the instance variables. It runs first because in order to start using your object(class), it must first be initialized (assuming it has any instance variables that needs initializing)
+
+5. What are modules?
+
+A set of methods. You can define methods for frequently occuring tasks or several methods that make sense as a set. It's like organizing a set of files into 1 folder.
+
+6. What are the different ways you can use a module?
+Namespacing: compartmentalizing a codebase so that different programmers can work on & write separate & different versions with out corrupting the total program.
+
+Mixins: Modules can be "mixed-in" to classes to give classes more functionality (like an extension pack or tool belt that can be used by different peo)
+
+UUID: universally unique identifier is a stadard used in software construction, a 128-bit value.
