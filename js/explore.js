@@ -15,9 +15,9 @@
 
 // loop thru string to break out each letter in the string 
 
-// identify the order of the letters; i.e., H=0, e=1, etc
+// identify the index order of the letters; i.e., H=0, e=1, etc
 
-// reverse the order of the letters; start with length-1
+// reverse the index order of the letters; start with length-1
 
 // print the resulting new string
 
