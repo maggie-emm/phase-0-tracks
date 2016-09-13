@@ -10,14 +10,17 @@
 // being able to think through a problem logically.
 
 // declare a variable string called "Hello!"
-
+var str = "Hello!";
 // identify the length of the string
-
-// loop thru string to break out each letter in the string 
-
+// go thru string to break out each letter in the string indiv
 // identify the index order of the letters; i.e., H=0, e=1, etc
+for (var i = 0; i < str.length; i++) {
+	console.log(str[i]);
+}
 
 // reverse the index order of the letters; start with length-1
-
+//for (str i = 0; i >= str.length; i -1) {
+//	console.log(str[i]);
+//}
 // print the resulting new string
 
