@@ -10,14 +10,25 @@
 // being able to think through a problem logically.
 
 // declare a variable string called "Hello!"
-var word = "Hello!";
-var reversed_word = "";
-// identify the length of the string
-// go thru string to break out each letter in the string indiv
-// identify the index order of the letters; i.e., H=0, e=1, etc
-for ( i >= 0; var = word.length -1; i--) {
-	console.log(word[i]);
+// var word = "Hello!";
+// var reversed_word = (" ");
+// // identify the length of the string
+// // go thru string to break out each letter in the string indiv
+// // identify the index order of the letters; i.e., H=0, e=1, etc
+
+function reversed_word(str){
+	var rev_word = " ";
+    return str.split("").reverse().join("");
 }
+
+var reversed_word("Hello!")
+
+
+
+// if (word.length == reversed_word.length)
+// for ( i >= 0; var = word.length -1; i--) {
+// 	console.log(word[i]);
+// }
 //for (var )
 // reverse the index order of the letters; start with length-1
 //for (str i = 0; i >= str.length; i -1) {
