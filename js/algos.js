@@ -5,18 +5,24 @@ var phrases = ["Panthers", "Panthers Rock", "Best QB coach in the league"];
 // get length of arr
 phrases.length; 
 // # items in var phrases
-phrases.toString();
-// split elements into " " to count.length
-// get length for string(1), string(2), etc
-// sample=["long phrase", "longest phrase", "longer phrase"]
-// expect .to eq "longest phrase"
-// NOTE: some.string.length will provide expect
-// add driver code
+var item1 = phrases[0];
+var item2 = phrases[1];
+var item3 = phrases[2];
+// expect longest phrase.to eq "Best QB coach..."
+// var longest_phrase = () {
+	
+// }
 
+// add driver code
 console.log(phrases);
-console.log(phrases.length)
-console.log(phrases.toString())
-console.log(String.length)
+console.log(phrases.length);
+console.log(item1); 
+console.log(item1.length);
+console.log(item2); 
+console.log(item2.length);
+console.log(item3); 
+console.log(item3.length);
+
 
 // Rel1: Find Key-Value Match
 // write a function that checks 2 object to see
