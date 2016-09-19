@@ -24,7 +24,6 @@ phrase_length.push[z];
 // 	console.log("The longest phrase is: ");
 // }
 
-
 // add driver code
 console.log(phrases);
 console.log(phrases.length);
@@ -40,12 +39,17 @@ console.log(phrase_length[2]);
 
 
 // Rel1: Find Key-Value Match
+var student
+var student1 = {last4_ssn:5555, course_num:"5-32b"};
+var student2 = {last4_ssn:1111, course_num:"5-32b"}
 // write a function that checks 2 object to see
 //   if at least 1 key-value pair matches both objects
 // allow additions to file at top and test at bottom
 // expect when function called to check match .to eq= true
 // i.e.,{name: "Al", age: 54} || {name: "Tip", age:54}=>true
 // add driver code
+console.log(student1)
+console.log(student2)
 
 // Rel2: Generate Random Test Data
 // write function takes a num as the length of an array
