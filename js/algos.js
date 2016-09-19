@@ -1,10 +1,22 @@
 // Rel0: Find Longest Phrase
 // write a function to take a str array
-// returns longest word or phrase in array
+var phrases = ["Panthers", "Panthers Rock", "Best QB coach in the league"];
+// spec: returns longest word or phrase in array
+// get length of arr
+phrases.length; 
+// # items in var phrases
+phrases.toString();
+// split elements into " " to count.length
+// get length for string(1), string(2), etc
 // sample=["long phrase", "longest phrase", "longer phrase"]
 // expect .to eq "longest phrase"
 // NOTE: some.string.length will provide expect
 // add driver code
+
+console.log(phrases);
+console.log(phrases.length)
+console.log(phrases.toString())
+console.log(String.length)
 
 // Rel1: Find Key-Value Match
 // write a function that checks 2 object to see
