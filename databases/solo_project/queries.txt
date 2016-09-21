@@ -1,4 +1,4 @@
-Run a SQL query for each of the following:
+REL2: Run a SQL query for each of the following:
 
 1) Display the information in one table (either table is fine).
 
@@ -66,3 +66,21 @@ sqlite> SELECT * FROM booklist;
 6|SQL for Dummies|Taylor, Allen G.|4|true
 7|SQL Queries for Mere Mortals|Viescas, John L. & Hernandez, Michael J.|4|true
 sqlite>
+
+
+REL3: Research on Your Own:
+
+1) There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed? Can you bookmark any good diagrams that will help you tell different joins apart in the future?
+
+http://www.w3schools.com/sql/sql_join.asp
+
+Different SQL JOINs you can use:
+
+INNER JOIN: Returns all rows when there is at least one match in BOTH tables
+LEFT JOIN: Return all rows from the left table, and the matched rows from the right table
+RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table
+FULL JOIN: Return all rows when there is a match in ONE of the tables
+
+
+2) Try a few different joins in your database, and record the commands and the output in queries.txt.
+
