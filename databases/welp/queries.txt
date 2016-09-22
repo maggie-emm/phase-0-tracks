@@ -1,0 +1,44 @@
+REL2:
+In the welp directory, create a file called queries.txt. Once you've figured out the queries below, paste them into queries.txt, along with the output from your database.
+2) You've joined two tables before. How do you join three?
+
+sqlite> SELECT * FROM businesses;
+1|Grundy Hollow Wedding Chapel
+2|Amir's Towing
+3|The Beagle Nightclub
+4|Lotus Yoga
+5|Plumbing by Janet
+6|Sushi World
+sqlite> SELECT * FROM users;
+1|Bradford|Pitt
+2|Mandy|Kaling
+3|Angela|Jolie
+4|Steven|Wonder
+sqlite> SELECT * FROM reviews;
+1|4|Great donuts|4|1
+2|2|1 hour later than promised|2|3
+3|3|HOT Yoga! Plenty HOT!|4|4
+sqlite> SELECT * FROM businesses, users, reviews WHERE businesses.id=reviews.business_id AND users.id=reviews.user_id;
+4|Lotus Yoga|1|Bradford|Pitt|1|4|Great donuts|4|1
+2|Amir's Towing|3|Angela|Jolie|2|2|1 hour later than promised|2|3
+4|Lotus Yoga|4|Steven|Wonder|3|3|HOT Yoga! Plenty HOT!|4|4
+sqlite>
+
+
+3) There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM businesses JOIN users JOIN reviews ON businesses.id=reviews.business_id AND users.id=reviews.user_id;
+Bradford|Pitt|Lotus Yoga|4|Great donuts
+Angela|Jolie|Amir's Towing|2|1 hour later than promised
+Steven|Wonder|Lotus Yoga|3|HOT Yoga! Plenty HOT!
+sqlite>
+
+
+4) How do you view the data of all three tables for just one particular business? 
+
+sqlite> SELECT businesses.name, users.first_name, users.last_name, reviews.stars, reviews.comment FROM businesses JOIN users JOIN reviews ON businesses.id=reviews.business_id AND users.id=reviews.user_id WHERE businesses.name="Amir's Towing";
+Amir's Towing|Angela|Jolie|2|1 hour later than promised
+sqlite> SELECT businesses.name, users.first_name, users.last_name, reviews.stars, reviews.comment FROM businesses JOIN users JOIN reviews ON businesses.id=reviews.business_id AND users.id=reviews.user_id WHERE businesses.name="Lotus Yoga";
+Lotus Yoga|Bradford|Pitt|4|Great donuts
+Lotus Yoga|Steven|Wonder|3|HOT Yoga! Plenty HOT!
+sqlite>
